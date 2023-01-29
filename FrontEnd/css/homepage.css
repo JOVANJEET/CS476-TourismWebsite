@@ -3,13 +3,13 @@
   padding: 0;
 }
 
-header {
+/* header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url("b.jpg");
   height: 100vh;
   background-size: cover;
   background-position: center;
-}
+} */
 
 ul {
   float: right;
