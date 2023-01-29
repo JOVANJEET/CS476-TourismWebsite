@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     'blog.apps.BlogConfig',
     'djongo',
+    'static',
+
 ]
+STATICFILES_DIRS = [BASE_DIR / 'static', ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -24,5 +24,6 @@ urlpatterns = [
     path('register/', v.register, name="register"),
     path('login/', v.login_view, name="login"),
     path('home/', v.home, name="index"),
+    path('explore/', v.explore, name="explore"),
     #path('blogpost/', b.create_blog_post, name="blog"),
 ]

@@ -7,10 +7,14 @@ from .forms import RegisterForm, LoginForm
 
 def home(request):
     context = {'user': request.user}
-    return render(request, 'register/home.html', context)
+    return render(request, 'register/base.html', context)
+
+def explore(request):
+    context = {'user': request.user}
+    return render(request, 'register/explore.html', context)
 
 
-# Create your views here.
+
 def register(response):
     if response.method == "POST":
         form = RegisterForm(response.POST)
