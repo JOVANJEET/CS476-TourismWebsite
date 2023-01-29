@@ -71,6 +71,7 @@ ul li.active a {
   background-color: rgb(11, 11, 69);
   color: white;
 }
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -144,3 +145,5 @@ ul li.active a {
   background-color: rgb(11, 11, 69);
   color: white;
 }
+=======
+>>>>>>> test
