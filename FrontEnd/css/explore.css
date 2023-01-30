@@ -11,7 +11,7 @@ body{
     margin: 0%;
     min-height: 100vh;
     font-family: 'Courier New', Courier, monospace;
-    background: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/leslie-street-spit-toronto-canada-sunset-brian-carson.jpg);
+    background: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/leslie-street-spit-toronto-canada-sunset-brian-carson.jpg");
     height: auto;
     background-position: center;
     background-repeat: no-repeat;
