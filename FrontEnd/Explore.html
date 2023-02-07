@@ -1,57 +1,113 @@
-<!DOCTYPE html> 
-<html> 
-    <head> 
-      
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/explore.css" />
-    
-    <head>
-        <!..meta>
-        <meta charset="utf-9"/>
-        <title> Explore Calgary</title>
-        <meta name="destination" content="Explore Calgary" />
-        <meta name = "viewport" content="width=device-width,inital-space=1">
-        <meta property = "title" content="Explore" />
-        <meta property = "og:image" content="/">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Explore Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" type=""text/css" href="css/Explore.css" / >
+</head>
+<body>
 
-        <link rel="stylesheet"type="text/css"media="screen and (max-width:580px)" href="css/explore.css"/>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="Homepage.html">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    </head>
-    <body>
-        <header>
-            <style>
-                .container.text{
-                    padding: auto;
-                    border-color: black;
-                }
-            </style>
+  
+</nav>
 
-            <table>
-                <tr>
-                    <h1 style="font-family:'Courier New', Courier, monospace"> Explore Calgary</h1>
-                </tr>
-            </table>
-        </header>
-    </body class = "Things-to-do">
-    <link rel=" stylesheet"type="text/css"media="screen and (max-width:580px)" href="css/explore.css"/>
-    <ul class = "List-Of-Things-To-Do">
-        <li class = "Main-Things">
-            <button type="button" class="List-Of-Things-To-Do"></button>
-         <a class="Mainmenulink" href="/Things-To-Do"> Things to do </a>
-         <ul class="Main-Menu-Level-1">
-            <li class="Main-Things" ><a class="Mainmenulink" href="/Things-To-Do/Camping" style="font-family: 'Courier New', Courier, monospace;">Camping</a>
-        </li>
-        <ul class="Main-Menu-Level-2">
-            <li class="Main-Things" ><a class="Mainmenulink" href="/Things-To-Do/ViewPoints" style="font-family: 'Courier New', Courier, monospace;">View Points</a>
-        </li>
-        <ul class="Main-Menu-Level-3">
-            <li class="Main-Things" ><a class="Mainmenulink" href="/Things-To-Do/adventures" style="font-family: 'Courier New', Courier, monospace;">adventures</a>
-        </li>
+    <style>
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .content{
+          background-color: white;
+          position: absolute;
+          top: 20%;
+          padding-left: 15%;
+          padding-right: 15%;
+          margin: left -10px;;
+        }  
+    </style>
+    <section class="cards-wrapper">
+        <div class="card-grid-space">
+            
+            <a class="card" href="Camping.html" style= "background-image: URL(https://images.squarespace-cdn.com/content/v1/6029f5b3f3559042ef28ad13/1626993464629-NXYX3F7EZTP27A1ZWXQ3/AdobeStock_114624888.jpeg)">
 
-    </ul>
-    <body>
+        <div>
+        <h1>Camping/Hiking</h1>
+        
+        <div class="tags">
+            <div class="tag">Adventure</div>
+        </div>
+        </div>
+        </a>
+        </div>
 
-    </body>
+        <div class="card-grid-space">
+            
+            <a class="card" href="Viewpoint.html" style="background-image:url(https://e5rxtr4t5ah.exactdn.com/wp-content/uploads/2020/05/kananaskis-alberta.png?strip=all&lossy=1&resize=825%2C620)">
+        <div>
+        <h1>View points</h1>
+        
+        <div class="tags">
+            <div class="tag"> Enjoy the Nature</div>
+        </div>
+        </div>
+        </a>
+        </div>
+        <div class="card-grid-space">
+            
+            <a class="card" href="Skiing.html" style="background-image:url(https://www.travelassociates.com/sites/v2.travel-associates.com.au/files/luxury-holidays-news/files/2016/03/banff-feature.jpg)">
+        <div>
+        <h1>Skiing</h1>
 
+        <div class="tags">
+            <div class="tag"> Skiing!</div>
+        </div>
+        </div>
+        </a>
+        </div>
+        <div class="card-grid-space">
+        </div>
+
+        <div class="card-grid-space">
+            
+            <a class="card" href="packages.html" style="background-image:url(https://trailblazertours.com/international_pages/images/slider/west_coast_canada_with_indian_meals_02.jpg)">
+        <div>
+        <h1>Tour packages</h1>
+
+        <div class="tags">
+            <div class="tag">Book your stay</div>
+        </div>
+        </div>
+        </a>
+        </div>
+        <div class="card-grid-space">
+        </div>
+
+        <div class="card-grid-space">
+            
+            <a class="card" href="experts.html" style= "background-image: URL(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpR3eTjXYk3_pVAMplZGz2pNly1Rl67NBSROus8hDILJ-NqYJyq8152mPxVbjs613mfIs&usqp=CAU)">
+
+        <div>
+        <h1>Learn from Experts</h1>
+        
+        <div class="tags">
+            <div class="tag">Guide</div>
+        </div>
+        </div>
+        </a>
+        </div>
+
+    </section>
+</body>
 </html>
