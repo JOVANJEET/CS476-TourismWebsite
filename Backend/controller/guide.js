@@ -1,6 +1,9 @@
 const Guide = require("../model/guide");
 const Package = require("../model/package");
 const bcrypt = require("bcrypt");
+const Blog = require("../model/blog");
+const fs = require("fs");
+const fileHelper = require("../util/file");
 //guide register
 exports.getRegister = (req, res) => {
   res.render("pages/register");
@@ -91,7 +94,7 @@ exports.postAddPackage = (req, res, next) => {
   }
   const { pname, pprice, pdesc, pslot, pduration, proutes, pinitary } =
     req.body;
-  console.log(pname, pprice, pdesc, pslot, pduration, proutes);
+
   const p1 = new Package({
     packageTitle: pname,
     packagePrice: pprice,
@@ -112,7 +115,7 @@ exports.postAddPackage = (req, res, next) => {
       guide.packages.push(p);
       guide.save();
     });
-    return res.redirect("/guide/addpackage");
+    return res.redirect("/guide/packagelist");
   });
 };
 exports.getPackageList = (req, res, next) => {
@@ -120,6 +123,54 @@ exports.getPackageList = (req, res, next) => {
     res.render("guide/packagelist", {
       guide: req.guide,
       packageList: packages,
+    });
+  });
+};
+
+exports.deletePackage = async (req, res, next) => {
+  const pId = req.body.pId;
+
+  await Package.findByIdAndRemove(pId)
+    .then(async (package) => {
+      if (!package) {
+        throw "Not found";
+      }
+      if (package.packageGuide.equals(req.guide._id)) {
+        const g = await Guide.findByIdAndUpdate(req.guide._id, {
+          $pull: { packages: package._id },
+        });
+        const pathImg = "upload/images/" + package.packageImage;
+        if (fs.existsSync(pathImg)) {
+          fileHelper.deleteFiles(pathImg);
+        }
+      } else {
+        console.log("You are not allowed!");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  res.redirect("/guide/packagelist");
+};
+
+exports.editePackage = (req, res, next) => {
+  const pId = req.params.pId;
+};
+
+//blogs
+exports.getAddBlog = (req, res, next) => {
+  res.render("guide/addBlog", {
+    guide: req.guide,
+  });
+};
+exports.getBlogList = (req, res, next) => {
+  const guide = req.guide;
+  // return console.log(guide);
+  Blog.find({ blogAuthor: guide._id }).then((blogs) => {
+    // return console.log(blogs);
+    res.render("guide/bloglist", {
+      guide: guide,
+      blogs: blogs,
     });
   });
 };
