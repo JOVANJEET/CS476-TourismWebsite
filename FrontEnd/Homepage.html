@@ -1,41 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>WanderLust</title>
-    <meta charset="utf-9" />
-    <meta name="viewpoint" content="width=device-width, inital-scale=1" />
-    <link rel = "stylesheet" type=""text/css" href="css/homepage.css" / >
+<DOCTYPE html>
+  <html lang="en">
 
-    <style type="text/css">
-      .err_message {
-        color: red;
-      }
-      table.ins {
-        border: 0px;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0"/>
+  <title> Homepage </title>
+  <link rel="stylesheet" href="Homepage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <header>
-      <div class="Main"></div>
-      <style>
-        body {
-          background-image: url(background.jpg);
-          background-repeat: no-repeat;
-        }
-      </style>
+</head>
 
-      <article>
-        <ul>
-          <li class="active"><a href="Homepage.html">Home</a></li>
-          <li><a href="Explore.html">Explore</a></li>
-          <li><a href="Reservation.html">Reservation</a></li>
-          <li><a href="Learnfromexperts.html">Learn from Experts</a></li>
-          <li><a href="Faq.html">FAQ</a></li>
-          <li><a href="Mainpage.html">MainPage</a></li>
-        </ul>
-      </article>
-    </header>
-  </body>
+<body> 
+  <header>
+      <nav class="navbar">
+          <h2>Wanderlust</h2>
+          <ul id="list">
+              <li class="active"><a href="#"> Home </a></li>
+              <li><a href="Explore.html"> Explore </a></li>
+              <li><a href="Reservations.html"> Reservations </a></li>
+              <li><a href="Learnfromexperts.html"> Know from experts</a></li>
+              <li><a href="Faq.html"> FAQ </a></li>
+          </ul>
+          <ul id="hamBurger">
+              <li><i class= "fa-solid fa-bars"></i></li>
+          </ul>
+
+          <ul class="responsive">
+              <li class="active"><a href="#"> Home </a></li>
+              <li><a href="Explore.html"> Explore </a></li>
+              <li><a href="Reservations.html"> Reservations </a></li>
+              <li><a href="Learnfromexperts.html"> Know from experts</a></li>
+              <li><a href="Faq.html"> FAQ </a></li>
+          </ul>
+      </nav>
+  </header>
+
+
+  <section id="home">
+      <div class="home-left">
+          <img src="home.jpg" alt="" width="1500" height="2000">
+      </div>
+      <div class="home-right">
+          <h2 class="home-heading"> About Us </h2>
+          <p class="home-para"> Welcome to our tourism website! We are a team of passionate travel enthusiasts who love to explore and share our experiences with others. Our goal is to provide you with the best travel information and inspiration to help you plan your next adventure. Whether you're looking for a relaxing beach getaway, an adventurous trek through the mountains, or a cultural immersion in a new city, we've got you covered. Let us be your guide to the world of travel!
+              We also provide you with the best affordable travel packages in the province. To know more about the travel packages click on the below button!
+          </p>
+          <a href="Reservations.html" class="btn"> Reservations</a>
+      </div>
+  </section>
+
+  <section id="collectibles">
+      <h2 class= "heading">Antiques and Collectibles</h2>
+      <p>
+          
+          It's always a good idea to call ahead to confirm hours of operation and inventory before visiting any of these stores.
+      </p>
+      <div class="num">
+          <div class="num-item"><span>Empire Ammolite</span></div>
+          <div class="num-item"><span> Wonderland Sculpture</span></div>
+          <div class="num-item"><span>The Canadian Badlands</span></div>
+      </div>
+  </section>
+
+  
+</body>
+<script src="script.js"></script>
 </html>

@@ -1,0 +1,73 @@
+.form-group {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active,
+  .form-group:hover {
+    background-color: #ccc;
+  }
+  
+ header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("https://cdn.getyourguide.com/img/location/5c93974e1a558a.jpeg/99.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  
+  
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  .navbar {
+    padding-top: 1%;
+  }
+  
+  .contact {
+    margin-top: 5%;
+  }
+  
+  ul {
+    float: right;
+    margin-top: 25px;
+    list-style-type: none;
+  }
+  
+  ul li {
+    display: inline-block;
+  }
+  
+  ul li a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(19, 18, 18);
+    padding: 5px 20px;
+    border: 3px solid transparent;
+    transition: 0.6s ease;
+  }
+  
+  ul li a:hover {
+    text-align: center;
+    background-color: rgb(249, 249, 250);
+    color: #000;
+  }
+  
+  ul li.active a {
+    background-color: rgb(250, 251, 253);
+    color: #000;
+  }
+  
