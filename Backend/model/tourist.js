@@ -1,60 +1,59 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const guideSchema = new Schema(
+const touristSchema = new Schema(
   {
-    guideName: {
+    touristName: {
       type: String,
     },
-    guideEmail: {
+    touristEmail: {
       type: String,
     },
-    guidePassword: {
+    touristPassword: {
       type: String,
     },
-    guidePhone: {
-      type: String,
-      default: "",
-    },
-    guideImage: {
-      type: String,
-    },
-    guideAddress: {
+    touristPhone: {
       type: String,
       default: "",
     },
-    guideState: {
+    touristImage: {
       type: String,
-      default: "",
     },
-    guideCity: {
-      type: String,
-      default: "",
-    },
-    guideOrganization: {
-      type: String,
-      default: "",
-    },
-    guideEducation: {
-      type: String,
-      default: "",
-    },
-    guideCountry: {
-      type: String,
-      default: "",
-    },
-
     profileComplete: {
       type: Boolean,
       default: false,
     },
-    blogs: [
+    touristAddress: {
+      type: String,
+      default: "",
+    },
+    touristState: {
+      type: String,
+      default: "",
+    },
+    touristCity: {
+      type: String,
+      default: "",
+    },
+    touristOrganization: {
+      type: String,
+      default: "",
+    },
+    touristEducation: {
+      type: String,
+      default: "",
+    },
+    touristCountry: {
+      type: String,
+      default: "",
+    },
+    blogsAction: [
       {
-        type: Schema.Types.ObjectId,
-        ref: "Blog",
+        blog: { type: Schema.Types.ObjectId, ref: "Blog" },
+        likedislike: { type: String },
       },
     ],
-    packages: [
+    bookedPackages: [
       {
         type: Schema.Types.ObjectId,
         ref: "Package",
@@ -63,5 +62,4 @@ const guideSchema = new Schema(
   },
   { timestamps: true }
 );
-
-module.exports = mongoose.model("Guide", guideSchema);
+module.exports = mongoose.model("Tourist", touristSchema);
