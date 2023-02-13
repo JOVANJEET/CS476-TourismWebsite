@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width", initial-scale="1.0"/>
   <title> Homepage </title>
-  <link rel="stylesheet" href="Homepage.css">
+  <link rel="stylesheet" href="css/Homepage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -40,7 +40,7 @@
 
   <section id="home">
       <div class="home-left">
-          <img src="home.jpg" alt="" width="1500" height="2000">
+          <img src="home.jpeg" alt="" width="1500" height="2000">
       </div>
       <div class="home-right">
           <h2 class="home-heading"> About Us </h2>
@@ -64,7 +64,34 @@
       </div>
   </section>
 
-  
+  <section id="weather">
+      <div class="weather-left">
+          <h2> Climatic Conditions</h2>
+          <p>
+              Alberta has a humid continental climate with long, cold winters and short, warm summers. Temperatures can vary widely throughout the year, with average temperatures ranging from -10°C (14°F) in January to 17°C (63°F) in July. The province receives a moderate amount of precipitation, with the majority falling during the summer months. Alberta is also known for its frequent chinook winds, which can cause sudden, dramatic temperature increases during the winter months. Additionally, the province experiences occasional severe weather events such as thunderstorms, tornadoes, and blizzards.
+
+          </p>
+          </div>
+          <div class="weather-right">
+          <ul>
+              <a class="weatherwidget-io" href="https://forecast7.com/en/53d93n116d58/alberta/" data-label_1="ALBERTA" data-label_2="WEATHER" data-font="Times New Roman" data-icons="Climacons Animated" data-theme="mountains" >ALBERTA WEATHER</a>
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){js=d.createElement(s);
+      js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+fjs.parentNode.insertBefore(js,fjs);}
+}
+(document,'script','weatherwidget-io-js');
+</script>
+          </ul>
+      </div>
+
+      <div class="weather-right">
+
+      </div>
+
+  </section>
 </body>
 <script src="script.js"></script>
 </html>
