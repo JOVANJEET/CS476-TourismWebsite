@@ -2,6 +2,10 @@ require("dotenv").config();
 const Blog = require("../model/blog");
 const Package = require("../model/package");
 const MainPage = require("../model/mainpage");
+const Guide = require("../model/guide");
+const Tourist = require("../model/tourist");
+const fs = require("fs");
+const fileHelper = require("../util/file");
 exports.getDashboard = (req, res, next) => {
   res.render("admin/dashboard", {
     admin: req.admin,
@@ -46,6 +50,30 @@ exports.postAddCarousel = (req, res, next) => {
 
     res.redirect("/");
   });
+};
+
+exports.getCarousels = (req, res, next) => {
+  MainPage.find().then((carousels) => {
+    res.render("admin/carousels", {
+      admin: req.admin,
+      carousels: carousels,
+      profileImage: false,
+    });
+  });
+};
+exports.deleteCarousel = (req, res, next) => {
+  const carouselId = req.body.id;
+  MainPage.findByIdAndRemove(carouselId)
+    .then((result) => {
+      const pathImg = "upload/images/" + result.carouselImage;
+      if (fs.existsSync(pathImg)) {
+        fileHelper.deleteFiles(pathImg);
+      }
+      res.redirect("/admin/carousels");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 //blogs
@@ -106,11 +134,12 @@ exports.abortBlog = (req, res, next) => {
 };
 
 //packages
-exports.approvePackage = (req, res, next) => {
+exports.actionPackage = (req, res, next) => {
   const packageId = req.body.packageId;
+  const action = req.body.action;
   Package.findByIdAndUpdate(packageId)
     .then((pack) => {
-      pack.status = "approved";
+      pack.status = action;
       return pack.save();
     })
     .then((result) => {
@@ -128,11 +157,38 @@ exports.viewBlog = (req, res, next) => {
     .populate("blogAuthor")
     .exec()
     .then((blog) => {
-      res.render("singleblog", {
+      if (blog.status === "approved") {
+        return res.redirect("/blog/" + blogId);
+      }
+      res.render("viewblog", {
         admin: req.admin,
         blog: blog,
+        isview: true,
         isTouristAuth: false,
         profileImage: false,
       });
     });
+};
+
+exports.getGuides = (req, res, next) => {
+  Guide.find()
+    .populate("packages")
+    .exec()
+    .then((guides) => {
+      res.render("admin/allGuideList", {
+        admin: req.admin,
+        guides: guides,
+        profileImage: false,
+      });
+    });
+};
+
+exports.getTourists = (req, res, next) => {
+  Tourist.find().then((tourists) => {
+    res.render("admin/allTourist", {
+      admin: req.admin,
+      tourists: tourists,
+      profileImage: false,
+    });
+  });
 };

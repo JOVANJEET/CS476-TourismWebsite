@@ -17,6 +17,12 @@ const commentSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "Tourist",
     },
+    replies: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Reply",
+      },
+    ],
     commentBlog: {
       type: Schema.Types.ObjectId,
       ref: "Blog",
@@ -25,4 +31,4 @@ const commentSchema = new Schema(
   { timestamps: true }
 );
 
-const Comment = mongoose.model("Comment", commentSchema);
+module.exports = mongoose.model("Comment", commentSchema);
