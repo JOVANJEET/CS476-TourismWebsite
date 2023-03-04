@@ -23,12 +23,21 @@ const packageSchema = new Schema(
         type: String,
       },
     ],
+    packageViews: {
+      type: Number,
+      default: 0,
+    },
+    status: {
+      type: String,
+      default: "pending",
+    },
     packagePrice: {
       type: String,
     },
     packageImage: {
       type: String,
     },
+
     packageGuide: {
       type: Schema.Types.ObjectId,
       ref: "Guide",

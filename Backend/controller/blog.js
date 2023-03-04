@@ -61,10 +61,19 @@ exports.deleteBlog = async (req, res, next) => {
 };
 
 //globlal
-exports.getMainBlogList = (req, res, next) => {
+exports.getMainBlogList = async (req, res, next) => {
   //latest blogs
   const guide = req.guide;
   // return console.log(guide);
+  const trendingBlogs = await Blog.find({
+    status: "approved",
+  })
+    .sort({ blogViews: -1 })
+    .populate("blogAuthor")
+    .limit(4)
+    .exec();
+  // return console.log(trendingBlogs);
+
   Blog.find({
     $and: [{ status: "approved" }],
   })
@@ -77,6 +86,7 @@ exports.getMainBlogList = (req, res, next) => {
       res.render("blogs", {
         guide: req.guide,
         blogs: blogs,
+        trendingBlogs: trendingBlogs,
       });
     });
 };
@@ -160,7 +170,7 @@ exports.getBlogById = async (req, res, next) => {
         guide: req.guide,
         tourist: req.tourist,
         blog: blog,
-
+        isview: false,
         nextBlog: nextBlog,
         prevBlog: prevBlog,
         likedilkeAction: likedilkeAction,
@@ -275,11 +285,18 @@ exports.postLikeDislike = async (req, res, next) => {
 };
 
 //fetch query
-exports.getBlogByTag = (req, res, next) => {
+exports.getBlogByTag = async (req, res, next) => {
   const tag = req.params.tag;
   if (tag === "latest") {
     return res.redirect("/blogs");
   }
+  const trendingBlogs = await Blog.find({
+    status: "approved",
+  })
+    .sort({ blogViews: -1 })
+    .populate("blogAuthor")
+    .limit(4)
+    .exec();
   Blog.find({ blogTag: tag, status: "approved" })
     .sort({ createdAt: -1 })
     .populate("blogAuthor")
@@ -291,6 +308,7 @@ exports.getBlogByTag = (req, res, next) => {
       res.render("blogs", {
         guide: req.guide,
         blogs: blogs,
+        trendingBlogs: trendingBlogs,
       });
     });
 };
@@ -400,24 +418,6 @@ exports.postReply = (req, res, next) => {
   }
 };
 
-exports.getBlogBySearch = (req, res, next) => {
-  const search = req.body.search;
-  Blog.find({
-    $or: [
-      { blogTitle: { $regex: search, $options: "i" } },
-      { blogContent: { $regex: search, $options: "i" } },
-    ],
-  })
-    .sort({ createdAt: -1 })
-    .populate("blogAuthor")
-    .exec()
-    .then((blogs) => {
-      if (!blogs) {
-        return res.redirect("/blogs");
-      }
-      res.render("blogs", {
-        guide: req.guide,
-        blogs: blogs,
-      });
-    });
+exports.getBlogBySearch = async (req, res, next) => {
+  console.log(req.query);
 };
