@@ -25,6 +25,7 @@ const adminRoute = require("./routes/admin");
 const touristRoute = require("./routes/tourist");
 const publicRoute = require("./routes/publicCon");
 const blogRoute = require("./routes/blog");
+
 const packageRoute = require("./routes/package");
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -109,6 +110,7 @@ app.use("/tourist", touristRoute);
 app.use(packageRoute);
 app.use(blogRoute);
 
+
 app.get("/profile", (req, res) => {
   res.render("pages/profile", { guide: req.guide });
 });
@@ -116,7 +118,7 @@ app.get("/basicDetails", (req, res) => {
   res.render("pages/basicdetails", { guide: req.guide });
 });
 app.get("/faq", (req, res) => {
-  res.render("pages/feq", { guide: req.guide });
+  res.render("pages/faq", { guide: req.guide });
 });
 
 app.get("/allPackage", (req, res) => {

@@ -1,6 +1,10 @@
-<%- include("../conn/header.ejs") %> <%- include("../conn/top.ejs") %>
+<!-- /header -->
+<%- include("../conn/header.ejs") %> 
+<%- include("../conn/top.ejs") %>
 <!-- Main Sidebar Container -->
-<%- include("./navbar.ejs") %>
+<%- include("./navebar.ejs") %>
+
+<!-- Main Start -->
 
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -10,7 +14,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3>Package Request</h3>
+              <h3>Package</h3>
             </div>
           </div>
           <!-- /.card -->
@@ -23,12 +27,11 @@
                   <tr>
                     <th>Id</th>
                     <th>Package Name</th>
-                    <th>Posted By</th>
-                    <th>Date</th>
+                    <th>Booked Date</th>
+                    <th>Price</th>
+                    <th>Destination</th>
+                    <th>Package Code</th>
                     <th>Status</th>
-                    <th>View</th>
-                    <th>Action</th>
-                   
                   </tr>
                 </thead>
                 <tbody>
@@ -36,22 +39,18 @@
                   <tr>
                     <td>1</td>
                     <td>ABCD</td>
-                    <td>Anubhav Raj</td>
-                    <td>12/01/2012</td>
-                    <td> <button   style=" border: none;" type="button" class="btn-sm btn-block bg-gradient-warning  text-white" >inProcess</button></td>
+                    <td>15/03/2023</td>
+                    <td>2000</td>
+                    <td>Vancouver -> Alberta </td>
+                    <td>VVA-235</td>
                     <td>
-                      <div style="display: flex; ">
-                        <button   style=" border: none;"type="button" class="btn-sm btn-block bg-gradient-warning  text-white" >View</button>
+                      <div style="display: flex;">
+                        <button type="button" class="btn-sm btn-block bg-gradient-warning  text-white" >InProcess</button>
                       </div>
                     </td>
-                    <td>
-                        <div style="display: flex;justify-content: space-evenly; ">
-                             <div class=" mr-3">  <button  style=" border: none;" type="button" class="btn-sm btn-block bg-gradient-success  text-white "  > Approved</button></div>
-                              <div><button   style=" border: none;" type="button" class="btn-sm btn-block bg-gradient-danger  text-white" > DisApproved</button>
-                              </div>
-                          </div>
-                    </td>
                   </tr>
+    
+
                 </tbody>
               </table>
             </div>

@@ -1,5 +1,5 @@
 <!-- /header -->
-<%- include("../conn/header.ejs") %> <%- include("../conn/top.ejs") %>
+<%- include("../conn/header.ejs") %>  <%- include("../conn/top.ejs") %>
 <!-- Main Sidebar Container -->
 <%- include("../conn/navebar.ejs") %>
 
@@ -40,7 +40,8 @@
                     <!-- textarea -->
                     <div class="form-group">
                       <label>Package Description</label>
-                      <textarea name="pdesc" rows="5" cols="100"></textarea>
+                  
+                      <textarea   class="form-control" name="pdesc" rows="5" cols="100"></textarea>
                     </div>
                   </div>
                 </div>
@@ -50,12 +51,7 @@
                     <!-- textarea -->
                     <div class="form-group">
                       <label>Tour Itinerary</label>
-                      <textarea
-                        name="pitinerary"
-                        rows="5"
-                        cols="100"
-                        name="pinitary"
-                      ></textarea>
+                      <textarea  class="form-control" rows="5" cols="100" name="pinitary"></textarea>
                     </div>
                   </div>
                 </div>
@@ -124,13 +120,13 @@
                     style="width: 100%"
                     name="proutes"
                   >
-                    <option>Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
+                    <option>Vancouver</option>
+                    <option>Yukon</option>
+                    <option>Nova Scotia</option>
+                    <option>Qubec</option>
+                    <option>Victoria</option>
+                    <option>Toronto</option>
+                    <option>ontario</option>
                   </select>
                 </div>
 
@@ -188,4 +184,5 @@
   <!-- /.content -->
 </div>
 <!-- /Footer -->
-<%- include("../conn/copyright.ejs") %> <%- include("../conn/footer.ejs") %>
+
+

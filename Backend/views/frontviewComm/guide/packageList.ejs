@@ -30,19 +30,21 @@
                     <th>Route</th>
                     <th>Price</th>
                     <th>Image</th>
+                    <th>Status</th>
                     <th>Start Date</th>
                     <th>End Date</th>
+                    
                     <th>Sheet</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <% if(packageList.length > 0){ %>
-                  <% for(var i=0; i<packageList.length; i++){ %>
+                  <% for(var i=0; i<packageList.length; i++){  %>
                   <tr>
-                    <td><%=packageList[i]._id%></td>
-                    <td><%= packageList[i].packageTitle %></td>
-                    <td><%= packageList[i].packageDescription %></td>
+                    <td><%=i %></td>
+                    <td><%= packageList[i].packageTitle %></td>            
+                    <td><%= packageList[i].packageDescription.substring(0, 100) %>...</td>
                     <% var routes ="";%>
                     <% packageList[i].packageRoutes.forEach(pr=>{ %>
                     <% routes += pr + ", ";%>
@@ -50,10 +52,26 @@
                     <td><%= routes %></td>
                     <td><%= packageList[i].packagePrice %></td>
                     <td><img src="/profile/<%= packageList[i].packageImage %>" width="50px" height="50px"></td>
+                    <td>
+                    <% if(packageList[i].status==="pending") {%>
+                      <button   style=" border: none;" type="button" class="btn-sm btn-block bg-gradient-warning  text-white" >In Process</button>
+                     <% }else if(packageList[i].status==="approved"){ %>
+                     <button   style=" border: none;" type="button" class="btn-sm btn-block bg-gradient-success  text-white" >Approved</button>
+                     <% }else{ %>
+                     <button   style=" border: none;" type="button" class="btn-sm btn-block bg-gradient-danger  text-white" >DisApproved</button>
+                     <% } %>
+                    </td>
                     <td>6</td>
                     <td>4</td>
                     <td>5</td>
-                    <td>Edit View Delete</td>
+                    <td>
+                      <div style="display: flex;">
+                        <a href="/package/<%=packageList[i]._id%>" class="btn btn-block bg-gradient-success m-2" >view</a>
+                        <!-- <button type="button" class="btn btn-block bg-gradient-warning m-2">Edit</button> -->
+                        <form action="/guide/delete" method="post"><input name="pId" value="<%=packageList[i]._id%>" hidden />
+                        <button type="submit" class="btn btn-block bg-gradient-danger m-2">Delete</button></form>
+                      </div>
+                      </td>
                   </tr>
                   <% } %>
                   <% } else{%>

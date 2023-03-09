@@ -1,7 +1,7 @@
 {
   "name": "tourist-web",
   "version": "1.0.0",
-  "description": "Tourist Guide Website",
+  "description": "Tourist Website",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shoaibisa/tourist-web.git"
+    "url": "git+https://github.com/JOVANJEET/CS476-TourismWebsite.git"
   },
   "author": "Team",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shoaibisa/tourist-web/issues"
+    "url": "https://github.com/JOVANJEET/CS476-TourismWebsite"
   },
-  "homepage": "https://github.com/shoaibisa/tourist-web#readme",
+  "homepage": "https://github.com/JOVANJEET/CS476-TourismWebsite",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
@@ -29,6 +29,7 @@
     "express-session": "^1.17.3",
     "mongoose": "^6.9.0",
     "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
     "vue": "^2.7.14"
   }
 }
