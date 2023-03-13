@@ -62,6 +62,14 @@ exports.deleteBlog = async (req, res, next) => {
 
 //globlal
 exports.getMainBlogList = async (req, res, next) => {
+  let logintype = "none";
+  if (req.session.isAdminLoggedIn) {
+    logintype = "admin";
+  } else if (req.session.isLoggedIn) {
+    logintype = "guide";
+  } else if (req.session.isTouristLoggedIn) {
+    logintype = "tourist";
+  }
   //latest blogs
   const guide = req.guide;
   // return console.log(guide);
@@ -86,12 +94,21 @@ exports.getMainBlogList = async (req, res, next) => {
       res.render("blogs", {
         guide: req.guide,
         blogs: blogs,
+        logintype: logintype,
         trendingBlogs: trendingBlogs,
       });
     });
 };
 
 exports.getBlogById = async (req, res, next) => {
+  let logintype = "none";
+  if (req.session.isAdminLoggedIn) {
+    logintype = "admin";
+  } else if (req.session.isLoggedIn) {
+    logintype = "guide";
+  } else if (req.session.isTouristLoggedIn) {
+    logintype = "tourist";
+  }
   const bId = req.params.bId;
   let likedilkeAction = false;
   if (req.tourist) {
@@ -173,6 +190,7 @@ exports.getBlogById = async (req, res, next) => {
         isview: false,
         nextBlog: nextBlog,
         prevBlog: prevBlog,
+        logintype: logintype,
         likedilkeAction: likedilkeAction,
         isGuideAuth: req.isGuideAuth,
         isTouristAuth: req.isTouristAuth,
@@ -286,6 +304,14 @@ exports.postLikeDislike = async (req, res, next) => {
 
 //fetch query
 exports.getBlogByTag = async (req, res, next) => {
+  let logintype = "none";
+  if (req.session.isAdminLoggedIn) {
+    logintype = "admin";
+  } else if (req.session.isLoggedIn) {
+    logintype = "guide";
+  } else if (req.session.isTouristLoggedIn) {
+    logintype = "tourist";
+  }
   const tag = req.params.tag;
   if (tag === "latest") {
     return res.redirect("/blogs");
@@ -308,6 +334,49 @@ exports.getBlogByTag = async (req, res, next) => {
       res.render("blogs", {
         guide: req.guide,
         blogs: blogs,
+        logintype: logintype,
+        trendingBlogs: trendingBlogs,
+      });
+    });
+};
+
+//search blog
+exports.getBlogBySearch = async (req, res, next) => {
+  let logintype = "none";
+  if (req.session.isAdminLoggedIn) {
+    logintype = "admin";
+  } else if (req.session.isLoggedIn) {
+    logintype = "guide";
+  } else if (req.session.isTouristLoggedIn) {
+    logintype = "tourist";
+  }
+  const search = req.body.search;
+  const trendingBlogs = await Blog.find({
+    status: "approved",
+  })
+
+    .sort({ blogViews: -1 })
+    .populate("blogAuthor")
+    .limit(4)
+    .exec();
+  Blog.find({
+    $or: [
+      { blogTitle: { $regex: search, $options: "i" } },
+      { blogContent: { $regex: search, $options: "i" } },
+    ],
+    status: "approved",
+  })
+    .sort({ createdAt: -1 })
+    .populate("blogAuthor")
+    .exec()
+    .then((blogs) => {
+      if (!blogs) {
+        blogs = [];
+      }
+      res.render("blogs", {
+        guide: req.guide,
+        blogs: blogs,
+        logintype: logintype,
         trendingBlogs: trendingBlogs,
       });
     });
@@ -416,8 +485,4 @@ exports.postReply = (req, res, next) => {
         res.redirect("/blog/" + blogId);
       });
   }
-};
-
-exports.getBlogBySearch = async (req, res, next) => {
-  console.log(req.query);
 };
