@@ -47,6 +47,12 @@ const touristSchema = new Schema(
       type: String,
       default: "",
     },
+    booked: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Booked",
+      },
+    ],
     blogsAction: [
       {
         blog: { type: Schema.Types.ObjectId, ref: "Blog" },

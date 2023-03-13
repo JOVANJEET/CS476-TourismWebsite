@@ -15,6 +15,10 @@ const packageSchema = new Schema(
     packageSlot: {
       type: Number,
     },
+    packageSlotUsed: {
+      type: Number,
+      default: 0,
+    },
     packageDuration: {
       type: String,
     },
@@ -37,6 +41,12 @@ const packageSchema = new Schema(
     packageImage: {
       type: String,
     },
+    booked: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Booked",
+      },
+    ],
 
     packageGuide: {
       type: Schema.Types.ObjectId,
