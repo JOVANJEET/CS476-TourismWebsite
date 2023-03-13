@@ -203,3 +203,290 @@
 .section-products .single-product .author-stars .stars i.active {
     color: #fec000;
 }
+/*  Filter */
+.panel {
+    border: none;
+    box-shadow: none;
+}
+
+.panel-heading {
+    border-color:#eff2f7 ;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.panel-title {
+    color: #2A3542;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*product list*/
+
+.prod-cat li a{
+    border-bottom: 1px dashed #d9d9d9;
+}
+
+.prod-cat li a {
+    color: #3b3b3b;
+}
+
+.prod-cat li ul {
+    margin-left: 30px;
+}
+
+.prod-cat li ul li a{
+    border-bottom:none;
+}
+.prod-cat li ul li a:hover,.prod-cat li ul li a:focus, .prod-cat li ul li.active a , .prod-cat li a:hover,.prod-cat li a:focus, .prod-cat li a.active{
+    background: none;
+    color: #ff7261;
+}
+
+.pro-lab{
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+.pro-sort {
+    padding-right: 20px;
+    float: left;
+}
+
+.pro-page-list {
+    margin: 5px 0 0 0;
+}
+
+.product-list img{
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+
+.product-list .pro-img-box {
+    position: relative;
+}
+.adtocart {
+    background: #fc5959;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #fff;
+    left: 45%;
+    bottom: -25px;
+    position: absolute;
+}
+
+.adtocart i{
+    color: #fff;
+    font-size: 25px;
+    line-height: 42px;
+}
+
+.pro-title {
+    color: #5A5A5A;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.product-list .price {
+    color:#fc5959 ;
+    font-size: 15px;
+}
+
+.pro-img-details {
+    margin-left: -15px;
+}
+
+.pro-img-details img {
+    width: 100%;
+}
+
+.pro-d-title {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.product_meta {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+.product_meta span {
+    display: block;
+    margin-bottom: 10px;
+}
+.product_meta a, .pro-price{
+    color:#fc5959 ;
+}
+
+.pro-price, .amount-old {
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.amount-old {
+    text-decoration: line-through;
+}
+
+.quantity {
+    width: 120px;
+}
+
+.pro-img-list {
+    margin: 10px 0 0 -15px;
+    width: 100%;
+    display: inline-block;
+}
+
+.pro-img-list a {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.pro-d-head {
+    font-size: 18px;
+    font-weight: 300;
+}
+ li{
+    list-style: none;
+ }
+</style>
+<%- include("../frontviewComm/navbar.ejs") %>
+  
+   <div class="container-fluid row">
+       <div class="col-lg-3 mt-5">
+        <div class=" card mt-3 ">
+            <!-- <div class="row p-2">
+              <div class="col-md-12">
+                <form action="simple-results.html">
+                  <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Type your keywords here">
+                    <div class="input-group-append">
+                      <button type="submit" class="btn  btn-default">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div> -->
+          </div>
+          <div class=" card mt-3  p-2">
+            <div class="city"> <h4>All  packages</h4></div>
+             
+
+          </div> <div class=" card mt-3  p-2">
+            <div class="city"> <h4> Packages by well know Guide</h4></div>
+              <ul  style="text-decoration:  none;"  class="p-3">
+                
+              
+                    <li>
+                        <div class="form-check">
+           
+                            <label class="form-check-label">Explore the <a href="/blogs">Blogs</a></label>
+                            </div>
+                     </li>
+                    
+                      <!-- <div class="filter_btn"  style="display: flex; justify-content: end;">
+                        <button class="btn"  style="background-color: rgb(40, 111, 244); color: #ffff;">Filter</button>
+    
+                      </div> -->
+             
+              </ul>
+
+          </div>
+
+          <div class=" card mt-3  p-2">
+            <div class="city"> <h4>Place</h4></div>
+              <ul  style="text-decoration:  none;"  class="p-3">
+            
+                    <li>
+                        <div class="form-check">
+                            
+                            <label class="form-check-label">Visit the world</label>
+                            </div>
+                     </li>
+                  
+                      <!-- <div class="filter_btn"  style="display: flex; justify-content: end;">
+                        <button class="btn"  style="background-color: rgb(40, 111, 244); color: #ffff;">Filter</button>
+    
+                      </div> -->
+             
+              </ul>
+
+          </div>
+
+
+          
+           
+        </div>
+         <div class="col-lg-9 mt-5">
+
+            <section class="section-products">
+                <div class="container">
+                    <div class="row">
+                        <div class="navigation">
+                            <h2 class="title">All Packages</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <% if(packages.length>0){ %>
+                    <% for(var i=0; i<packages.length; i++){ %>
+                        <!-- Single Product -->     
+                        <div class="col-md-6 col-lg-12">
+                            <div class="single-product">
+                                <div class="img-part col-md-6 col-lg-2">
+                                    <img src="/profile/<%=packages[i].packageImage%>" alt="">
+        
+                                </div>
+                                <div class="product-discraption col-lg-7">
+                                  
+                                    <h3 class="title"><a href="/package/<%=packages[i]._id%>"><%=packages[i].packageTitle %></a></h3>
+                                    <p class="description"><%=packages[i].packageDescription.substring(0, 400)  %>..</p>
+                                    <div class="type-price">
+                                        <a href="/package/<%=packages[i]._id%>" class="type">Details</a>
+                                        <!-- <span class="price"><span class="dollar">$</span>14</span> -->
+                                    </div>
+                                </div>
+                                <div class="author-stars col-lg-3">
+                                    <div class="author">
+                                         <h6  style="font-size: 14px; font-weight: bold;"> Starting from </h6>
+                                    </div>
+                                         <div class="type-price">
+                                            <span class="price " style="font-weight: bold;"><span class="dollar">$</span><%=packages[i].packagePrice %></span>
+                                        </div>
+                                           <a  href="/booking/<%=packages[i]._id %>"class="btn" style="background-color: rgb(249, 200, 37);"> Book Now</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / End Single Product -->
+                         <% } %>
+                            <% }else{ %>
+                                <h3 class="m-3">No Packages Found</h3>
+                            <% } %>
+                        <!-- Single Product -->
+                    </div>
+                </div>
+            </section>
+
+         </div>
+       </div>
+        
+   </div>
+
+
+<%- include("../frontviewComm/footer.ejs") %>
