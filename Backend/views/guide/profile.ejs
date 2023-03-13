@@ -36,6 +36,13 @@
               <h3 class="profile-username text-center">
                 <%=guide.guideName %>
               </h3>
+              <p class="text-muted text-center">
+                Status: <%if(guide.guideAccepted){ %>
+                <span class="badge badge-success">Approved</span>
+                <% }else{ %>
+                <span class="badge badge-danger">Pending</span>
+                <% } %>
+              </p>
               <!-- <p class="text-muted text-center">Guide</p> -->
             </div>
           </div>
