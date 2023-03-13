@@ -1,0 +1,730 @@
+[{
+  "_id": "oXCt453c2ZMCETz98wdeFw-jZuZMmyeR",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679170444742"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    },
+    "isLoggedIn": true,
+    "guide": {
+      "_id": {
+        "$oid": "64039a1f16894bbe22153a9f"
+      },
+      "guideName": "jovan",
+      "guideEmail": "jovan@gmail.com",
+      "guidePassword": "$2b$12$o/EScLgTORxbmLj87aURtOJQP.trMGIRUrGKxMsd7fvw3h8Hc/eyq",
+      "guidePhone": "",
+      "guideAddress": "",
+      "guideState": "",
+      "guideCity": "",
+      "guideOrganization": "",
+      "guideEducation": "",
+      "guideCountry": "",
+      "profileComplete": false,
+      "blogs": [],
+      "packages": [],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1677957663986"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1677957663986"
+        }
+      },
+      "__v": 0
+    },
+    "isTouristLoggedIn": true,
+    "tourist": {
+      "_id": {
+        "$oid": "6403a67d16894bbe22153bc7"
+      },
+      "touristName": "Ritika Jaidka ",
+      "touristEmail": "rj@gmail.com",
+      "touristPassword": "$2b$12$afVKCKoLHv8nyb.xR10ye.FwlSXVu/MUkjC2NS0XsygILgNpwxL06",
+      "touristPhone": "",
+      "profileComplete": false,
+      "touristAddress": "",
+      "touristState": "",
+      "touristCity": "",
+      "touristOrganization": "",
+      "touristEducation": "",
+      "touristCountry": "",
+      "bookedPackages": [],
+      "blogsAction": [],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1677960829252"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1677960829252"
+        }
+      },
+      "__v": 0
+    }
+  }
+},{
+  "_id": "NqryDsgtB5s9dKSeqcwklB47LOit9maV",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679172234155"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isTouristLoggedIn": true,
+    "tourist": {
+      "_id": {
+        "$oid": "6403a67d16894bbe22153bc7"
+      },
+      "touristName": "Ritika Jaidka ",
+      "touristEmail": "rj@gmail.com",
+      "touristPassword": "$2b$12$afVKCKoLHv8nyb.xR10ye.FwlSXVu/MUkjC2NS0XsygILgNpwxL06",
+      "touristPhone": "613-333-7777",
+      "profileComplete": true,
+      "touristAddress": "123 Toronto dr",
+      "touristState": "SK",
+      "touristCity": "Regina",
+      "touristOrganization": "University of Regina",
+      "touristEducation": "Bachelors of Computer Science",
+      "touristCountry": "Canada",
+      "bookedPackages": [],
+      "blogsAction": [
+        {
+          "blog": {
+            "$oid": "64039a9b16894bbe22153abd"
+          },
+          "likedislike": "like",
+          "_id": {
+            "$oid": "6403a72016894bbe22153c16"
+          }
+        }
+      ],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1677960829252"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1677960992546"
+        }
+      },
+      "__v": 0,
+      "touristImage": "timage_1677960928542.jpg"
+    },
+    "isLoggedIn": true,
+    "guide": {
+      "_id": {
+        "$oid": "6403ad8316894bbe22153daa"
+      },
+      "guideName": "Radhika Jain",
+      "guideEmail": "radhe@gmail.com",
+      "guidePassword": "$2b$12$ztdDpEDMYiAzsGx./MdoGuvaoJv/C7JMVv3cMIQ24zg/8PJKwQlKK",
+      "guidePhone": "",
+      "guideAddress": "",
+      "guideState": "",
+      "guideCity": "",
+      "guideOrganization": "",
+      "guideEducation": "",
+      "guideCountry": "",
+      "profileComplete": false,
+      "blogs": [],
+      "packages": [],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1677962627243"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1677962627243"
+        }
+      },
+      "__v": 0
+    }
+  }
+},{
+  "_id": "pR1eowLX3durpML0ZUp4F6GIFu5LpAEl",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679191108372"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+},{
+  "_id": "beTrTM1aDoBv9ECqt_D8XZa9-v5u6ckP",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679191199596"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isLoggedIn": true,
+    "guide": {
+      "_id": {
+        "$oid": "6403ad8316894bbe22153daa"
+      },
+      "guideName": "Radhika Jain",
+      "guideEmail": "radhe@gmail.com",
+      "guidePassword": "$2b$12$ztdDpEDMYiAzsGx./MdoGuvaoJv/C7JMVv3cMIQ24zg/8PJKwQlKK",
+      "guidePhone": "+91 333 444 7789",
+      "guideAddress": "Karol Bagh",
+      "guideState": "Delhi",
+      "guideCity": "Delhi",
+      "guideOrganization": "Guide International",
+      "guideEducation": "Tourism",
+      "guideCountry": "India",
+      "profileComplete": true,
+      "blogs": [
+        {
+          "$oid": "6403aea016894bbe22153e2a"
+        }
+      ],
+      "packages": [],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1677962627243"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1677962912213"
+        }
+      },
+      "__v": 1,
+      "guideImage": "gimage_1677962700585.jpg"
+    }
+  }
+},{
+  "_id": "Q9xUmh-tMmb_Ufq_vfAICAfGjNTexYSp",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679680870526"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+},{
+  "_id": "GbBPhPG9TAyCL8LdLgN7VbFeGATLRZRI",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679683903856"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isLoggedIn": true,
+    "guide": {
+      "_id": {
+        "$oid": "6403ad8316894bbe22153daa"
+      },
+      "guideName": "Radhika Jain",
+      "guideEmail": "radhe@gmail.com",
+      "guidePassword": "$2b$12$ztdDpEDMYiAzsGx./MdoGuvaoJv/C7JMVv3cMIQ24zg/8PJKwQlKK",
+      "guidePhone": "+91 333 444 7789",
+      "guideAddress": "Karol Bagh",
+      "guideState": "Delhi",
+      "guideCity": "Delhi",
+      "guideOrganization": "Guide International",
+      "guideEducation": "Tourism",
+      "guideCountry": "India",
+      "profileComplete": true,
+      "blogs": [
+        {
+          "$oid": "6403aea016894bbe22153e2a"
+        }
+      ],
+      "packages": [
+        {
+          "$oid": "6403f97f5094ddea4b6c675d"
+        }
+      ],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1677962627243"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1677982079998"
+        }
+      },
+      "__v": 2,
+      "guideImage": "gimage_1677962700585.jpg"
+    }
+  }
+},{
+  "_id": "gsaDWAbLsPGqwY224Y_SHlpyrZtv_T7j",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679772481172"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+},{
+  "_id": "_Uvm04zKxeGgqrN8VnZ_ZZG3PsY4vRgB",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679779870464"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isLoggedIn": true,
+    "guide": {
+      "_id": {
+        "$oid": "640cf025961e4bcd88a5909c"
+      },
+      "guideName": "Rajinder Prasad",
+      "guideEmail": "rp@gmail.com",
+      "guidePassword": "$2b$12$f889FLQhr2mq6KMkSgKjXO7wppWTeNkfiTpd3GJPG8wA6E6kLrdT6",
+      "guidePhone": "",
+      "guideAddress": "",
+      "guideState": "",
+      "guideCity": "",
+      "guideOrganization": "",
+      "guideEducation": "",
+      "guideCountry": "",
+      "profileComplete": false,
+      "blogs": [],
+      "packages": [],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1678569509462"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1678569509462"
+        }
+      },
+      "__v": 0
+    }
+  }
+},{
+  "_id": "QtsohBodTia20vWKzLwO5BKjBJoQxnSl",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679798158414"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+},{
+  "_id": "RdJBSGbdKzOyCf008QthNQqRpdlF672x",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679798195669"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isLoggedIn": true,
+    "guide": {
+      "_id": {
+        "$oid": "6403ad8316894bbe22153daa"
+      },
+      "guideName": "Radhika Jain",
+      "guideEmail": "radhe@gmail.com",
+      "guidePassword": "$2b$12$ztdDpEDMYiAzsGx./MdoGuvaoJv/C7JMVv3cMIQ24zg/8PJKwQlKK",
+      "guidePhone": "+91 333 444 7789",
+      "guideAddress": "Karol Bagh",
+      "guideState": "Delhi",
+      "guideCity": "Delhi",
+      "guideOrganization": "Guide International",
+      "guideEducation": "Tourism",
+      "guideCountry": "India",
+      "profileComplete": true,
+      "blogs": [
+        {
+          "$oid": "6403aea016894bbe22153e2a"
+        }
+      ],
+      "packages": [
+        {
+          "$oid": "6403f97f5094ddea4b6c675d"
+        },
+        {
+          "$oid": "640b7f37c8eea4cefe4d9650"
+        },
+        {
+          "$oid": "640b806fc8eea4cefe4d9664"
+        },
+        {
+          "$oid": "640cd605961e4bcd88a58fbd"
+        },
+        {
+          "$oid": "640ce2b2961e4bcd88a58fd9"
+        },
+        {
+          "$oid": "640ce4f7961e4bcd88a58fe8"
+        },
+        {
+          "$oid": "640ce630961e4bcd88a59000"
+        },
+        {
+          "$oid": "640ce6cc961e4bcd88a5900a"
+        },
+        {
+          "$oid": "640ce7d1961e4bcd88a5901e"
+        },
+        {
+          "$oid": "640ce897961e4bcd88a59030"
+        },
+        {
+          "$oid": "640ce9b5961e4bcd88a59042"
+        },
+        {
+          "$oid": "640cea9c961e4bcd88a59054"
+        },
+        {
+          "$oid": "640ceb5d961e4bcd88a5905e"
+        },
+        {
+          "$oid": "640cec50961e4bcd88a59068"
+        }
+      ],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1677962627243"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1678568528692"
+        }
+      },
+      "__v": 15,
+      "guideImage": "gimage_1677962700585.jpg"
+    }
+  }
+},{
+  "_id": "AvL_PxnFcw7alQnEcEEOvmuSSQDWSdbP",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679853859648"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+},{
+  "_id": "hMvPKM4S28vYZqvAeeyAyv7pTjIJp6Qk",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679855223023"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isLoggedIn": true,
+    "guide": {
+      "_id": {
+        "$oid": "6403ad8316894bbe22153daa"
+      },
+      "guideName": "Radhika Jain",
+      "guideEmail": "radhe@gmail.com",
+      "guidePassword": "$2b$12$ztdDpEDMYiAzsGx./MdoGuvaoJv/C7JMVv3cMIQ24zg/8PJKwQlKK",
+      "guidePhone": "+91 333 444 7789",
+      "guideAddress": "Karol Bagh",
+      "guideState": "Delhi",
+      "guideCity": "Delhi",
+      "guideOrganization": "Guide International",
+      "guideEducation": "Tourism",
+      "guideCountry": "India",
+      "profileComplete": true,
+      "blogs": [
+        {
+          "$oid": "6403aea016894bbe22153e2a"
+        }
+      ],
+      "packages": [
+        {
+          "$oid": "6403f97f5094ddea4b6c675d"
+        },
+        {
+          "$oid": "640b7f37c8eea4cefe4d9650"
+        },
+        {
+          "$oid": "640b806fc8eea4cefe4d9664"
+        },
+        {
+          "$oid": "640cd605961e4bcd88a58fbd"
+        },
+        {
+          "$oid": "640ce2b2961e4bcd88a58fd9"
+        },
+        {
+          "$oid": "640ce4f7961e4bcd88a58fe8"
+        },
+        {
+          "$oid": "640ce630961e4bcd88a59000"
+        },
+        {
+          "$oid": "640ce6cc961e4bcd88a5900a"
+        },
+        {
+          "$oid": "640ce7d1961e4bcd88a5901e"
+        },
+        {
+          "$oid": "640ce897961e4bcd88a59030"
+        },
+        {
+          "$oid": "640ce9b5961e4bcd88a59042"
+        },
+        {
+          "$oid": "640cea9c961e4bcd88a59054"
+        },
+        {
+          "$oid": "640ceb5d961e4bcd88a5905e"
+        },
+        {
+          "$oid": "640cec50961e4bcd88a59068"
+        }
+      ],
+      "createdAt": {
+        "$date": {
+          "$numberLong": "1677962627243"
+        }
+      },
+      "updatedAt": {
+        "$date": {
+          "$numberLong": "1678568528692"
+        }
+      },
+      "__v": 15,
+      "guideImage": "gimage_1677962700585.jpg"
+    }
+  }
+},{
+  "_id": "BAVO4-58P0sXXWvicTw5MdcSavMpREI2",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679886870495"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+},{
+  "_id": "8KKuvQyKrLB3hvRlXh3Tw6SDIf7jFwNj",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679886921205"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+},{
+  "_id": "8GVYsfPVIP68WxRgcGkcbBYZZCK0cf-c",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679887098882"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+},{
+  "_id": "8zjcm-FN6Hnc1xanXkr31xzfeFNzFpvC",
+  "expires": {
+    "$date": {
+      "$numberLong": "1679888945117"
+    }
+  },
+  "session": {
+    "cookie": {
+      "originalMaxAge": null,
+      "expires": null,
+      "secure": null,
+      "httpOnly": true,
+      "domain": null,
+      "path": "/",
+      "sameSite": null
+    },
+    "isAdminLoggedIn": true,
+    "admin": {
+      "adminname": "admin@tg.com",
+      "adminpass": "mahi"
+    }
+  }
+}]

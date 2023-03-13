@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6403a67d16894bbe22153bc7"
+  },
+  "touristName": "Ritika Jaidka ",
+  "touristEmail": "rj@gmail.com",
+  "touristPassword": "$2b$12$afVKCKoLHv8nyb.xR10ye.FwlSXVu/MUkjC2NS0XsygILgNpwxL06",
+  "touristPhone": "613-333-7777",
+  "profileComplete": true,
+  "touristAddress": "123 Toronto dr",
+  "touristState": "SK",
+  "touristCity": "Regina",
+  "touristOrganization": "University of Regina",
+  "touristEducation": "Bachelors of Computer Science",
+  "touristCountry": "Canada",
+  "bookedPackages": [],
+  "blogsAction": [
+    {
+      "blog": {
+        "$oid": "64039a9b16894bbe22153abd"
+      },
+      "likedislike": "like",
+      "_id": {
+        "$oid": "6403a86b16894bbe22153d34"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677960829252"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1677961323115"
+    }
+  },
+  "__v": 0,
+  "touristImage": "timage_1677960928542.jpg"
+}]
