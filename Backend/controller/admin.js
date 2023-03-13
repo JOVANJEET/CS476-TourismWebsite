@@ -192,3 +192,24 @@ exports.getTourists = (req, res, next) => {
     });
   });
 };
+
+//actions
+exports.guideAction = (req, res, next) => {
+  const guideId = req.body.guideId;
+  const action = req.body.action;
+  let status = false;
+  if (action === "approved") {
+    status = true;
+  }
+  Guide.findById(guideId)
+    .then((guide) => {
+      guide.guideAccepted = status;
+      return guide.save();
+    })
+    .then((result) => {
+      res.redirect("/admin/guides");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
