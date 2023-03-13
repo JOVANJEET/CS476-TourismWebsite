@@ -12,6 +12,10 @@ const guideSchema = new Schema(
     guidePassword: {
       type: String,
     },
+    guideAccepted: {
+      type: Boolean,
+      default: false,
+    },
     guidePhone: {
       type: String,
       default: "",
