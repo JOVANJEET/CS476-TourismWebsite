@@ -42,7 +42,11 @@ exports.getLogin = (req, res) => {
 exports.postLogin = async (req, res, next) => {
   const gemail = req.body.gemail;
   const gpass = req.body.gpass;
-
+  // if (req.session.isTouristLoggedIn || req.session.isAdminLoggedIn) {
+  //   req.session.destroy((err) => {
+  //     // console.log(err);
+  //   });
+  // }
   Guide.findOne({ guideEmail: gemail })
     .then((guide) => {
       if (!guide) {
@@ -75,14 +79,32 @@ exports.postVlogout = (req, res) => {
   });
 };
 
-exports.getGuideDashboard = (req, res, next) => {
-  res.render("dashboard", {
+exports.getGuideDashboard = async (req, res, next) => {
+  const blogs = await Blog.find({ blogAuthor: req.guide._id }).exec();
+  const blogLabels = [];
+  const likes = [];
+  const dislikes = [];
+  blogs.forEach((blog) => {
+    if (blog.status === "approved") {
+      blogLabels.push(blog.blogTitle);
+      likes.push(blog.likes);
+      dislikes.push(blog.dislikes);
+    }
+  });
+
+  res.render("guide/dashboard", {
     guide: req.guide,
+    blogLabels: blogLabels,
+    likes: likes,
+    dislikes: dislikes,
     profileImage: req.guide.guideImage,
   });
 };
 
 exports.getAddPackage = (req, res, next) => {
+  if (!req.guide.guideAccepted) {
+    return res.redirect("/guide/dashboard");
+  }
   res.render("guide/addPackage", {
     guide: req.guide,
     profileImage: req.guide.guideImage,
@@ -162,6 +184,9 @@ exports.editePackage = (req, res, next) => {
 
 //blogs
 exports.getAddBlog = (req, res, next) => {
+  if (!req.guide.guideAccepted) {
+    return res.redirect("/guide/dashboard");
+  }
   res.render("guide/addBlog", {
     guide: req.guide,
     profileImage: req.guide.guideImage,
@@ -261,4 +286,32 @@ exports.postEditProfile = (req, res, next) => {
       res.redirect("/guide/profile");
     })
     .catch((err) => console.log(err));
+};
+
+//package
+exports.getPackageBookDetails = (req, res, next) => {
+  const pId = req.params.id;
+};
+
+//booking
+exports.getBookingList = (req, res, next) => {
+  const packageId = req.params.id;
+  const guide = req.guide;
+  Package.findById(packageId)
+    .populate({
+      path: "booked",
+      model: "Booked",
+      populate: {
+        path: "tourist",
+        model: "Tourist",
+      },
+    })
+    .exec()
+    .then((package) => {
+      res.render("guide/booking_details", {
+        guide: guide,
+        package: package,
+        profileImage: req.guide.guideImage,
+      });
+    });
 };
