@@ -21,7 +21,7 @@ router.post(
   isAdminLoggedin,
   adminConroller.deleteCarousel
 );
-router.post("/logout", adminConroller.postLogout);
+//router.post("/logout", adminConroller.postLogout);
 //blogs
 
 router.get("/blogs", isAdminLoggedin, adminConroller.getBlogs);
