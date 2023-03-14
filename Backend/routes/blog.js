@@ -16,7 +16,7 @@ router.post("/guide/deleteblog", isLoggedin, blogController.deleteBlog);
 router.get("/blogs", blogController.getMainBlogList);
 router.get("/blog/:bId", blogController.getBlogById);
 router.get("/blog/tag/:tag", blogController.getBlogByTag);
-
+router.post("/blog/search", blogController.getBlogBySearch);
 //comments
 router.post("/blog/comment", blogController.postComment);
 router.post("/blog/reply", blogController.postReply);
