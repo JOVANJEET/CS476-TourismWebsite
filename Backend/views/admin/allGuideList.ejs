@@ -28,7 +28,6 @@
                     <th>No.of Blog</th>
                     
                     <th>Date of joining</th>
-                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -44,27 +43,7 @@
                     <% var eventDate = new Date(guides[i].createdAt); %>
                      <%let dates =JSON.stringify(eventDate) %> <% dates = dates.slice(1,11) %> 
                     <td><%=dates %></td>
-                    <td>
-                      <div style="display: flex;justify-content: space-evenly; ">
-                        <% if(!guides[i].guideAcceped) {%>
-                          <div class=" mr-3">
-                          <form action="/admin/guide/action" method="post"> 
-                            <input type="hidden" name="guideId" value="<%=guides[i]._id%>">
-                            <input type="hidden" name="action" value="approved">
-                            <button  style=" border: none;" type="submit" class="btn-sm btn-block bg-gradient-success  text-white "  > Approved</button>
-                          </form>
-                        </div>
-                        <% } %>
-                            <div>
-                              <form action="/admin/guide/action" method="post"> 
-                                <input type="hidden" name="guideId" value="<%=guides[i]._id%>">
-                                <input type="hidden" name="action" value="disapproved">
-                                <button  style=" border: none;" type="submit" class="btn-sm btn-block bg-gradient-danger  text-white" > Abort Guide</button>
-
-                            </div>
-                        </div>
-                        
-                  </td>
+                    
                   </tr>
                   <% } %>
                   <% }else{ %>
