@@ -137,7 +137,7 @@
 </header>
 <!--  All Blog Body -->
 <div class="container" style="max-width: 1400px">
-  <div class="row">
+  <div class="row" style="justify-content: space-between;">
     <% if(blogs.length>0){ %>
     <div class="col-lg-9">
       <div class="card blog_card1">
@@ -240,19 +240,23 @@
     <% } %>
     <div class="col-lg-3">
       <div class="card mb-4">
+      
         <div class="card-header">Search</div>
         <div class="card-body">
           <div class="input-group">
+          <form action="/blog/search" method="POST" style="display: flex;">
             <input
-              class="form-control"
               type="text"
-              placeholder="Enter search term..."
-              aria-label="Enter search term..."
-              aria-describedby="button-search"
+              class="form-control"
+              placeholder="Search for..."
+              name="search"
             />
-            <button class="btn btn-primary" id="button-search" type="button">
-              Go!
-            </button>
+            <span class="input-group-append">
+              <button class="btn btn-secondary" type="submit">
+                Go!
+              </button>
+            </span>
+            </form>
           </div>
         </div>
       </div>

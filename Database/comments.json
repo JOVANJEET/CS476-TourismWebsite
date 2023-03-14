@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "6403a72e16894bbe22153c2e"
+  },
+  "commentContent": "I like this",
+  "commentAuthorType": "guide",
+  "commentAuthorGuide": {
+    "$oid": "64039a1f16894bbe22153a9f"
+  },
+  "replies": [],
+  "commentBlog": {
+    "$oid": "64039a9b16894bbe22153abd"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677961006022"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1677961006022"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403a81116894bbe22153cb8"
+  },
+  "commentContent": "This is a great information!!",
+  "commentAuthorType": "tourist",
+  "commentAuthorTourist": {
+    "$oid": "6403a67d16894bbe22153bc7"
+  },
+  "replies": [],
+  "commentBlog": {
+    "$oid": "64039a9b16894bbe22153abd"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677961233542"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1677961233542"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403a86316894bbe22153cfe"
+  },
+  "commentContent": "Good Info!!!",
+  "commentAuthorType": "guide",
+  "commentAuthorGuide": {
+    "$oid": "64039a1f16894bbe22153a9f"
+  },
+  "replies": [],
+  "commentBlog": {
+    "$oid": "64039a9b16894bbe22153abd"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677961315057"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1677961315057"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640d3aff24889872ecbbdb58"
+  },
+  "commentContent": "This is a great information!!",
+  "commentAuthorType": "guide",
+  "commentAuthorGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "replies": [],
+  "commentBlog": {
+    "$oid": "640cf12f961e4bcd88a590a8"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678588671870"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678588671870"
+    }
+  },
+  "__v": 0
+}]
