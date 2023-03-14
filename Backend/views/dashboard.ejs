@@ -32,7 +32,7 @@
   </section>
 </div>
 <!-- /Footer -->
-<%- include("conn/copyright.ejs") %> 
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -42,7 +42,7 @@ var ctx = document.getElementById("myChart").getContext("2d");
 var myChart = new Chart(ctx, {
   type: "bar",
   data: {
-    labels: ["Delhi", "Punjab", "Manali", "Simla", "Kashol", "Tamil"],
+    labels: ["Vancouver", "Calgary", "Halifax", "Toronto", "Regina", "Qubec"],
     datasets: [
       {
         label: "Like",
