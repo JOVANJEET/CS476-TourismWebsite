@@ -2,6 +2,8 @@ const router = require("express").Router();
 const guideController = require("../controller/guide");
 const isAuth = require("../middleware/isAuth");
 const isLoggedin = require("../middleware/isLoggedin");
+const touristController = require("../controller/tourist");
+
 const upload = require("../util/upload");
 
 router.get("/dashboard", isLoggedin, guideController.getGuideDashboard);
@@ -40,5 +42,10 @@ router.post("/logout", guideController.postVlogout);
 router.get("/addblog", isLoggedin, guideController.getAddBlog);
 router.get("/bloglist", isLoggedin, guideController.getBlogList);
 router.post("/blog/view", isLoggedin, guideController.viewBlog);
+
+//package
+
+router.get("/booking/:id", isLoggedin, guideController.getBookingList);
+router.post("/invoice", isLoggedin, touristController.getInvoice);
 
 module.exports = router;

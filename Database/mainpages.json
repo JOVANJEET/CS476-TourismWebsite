@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "640b75b0c8eea4cefe4d9617"
+  },
+  "carouselImage": "cimage_1678472624149.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640b75f1c8eea4cefe4d961b"
+  },
+  "carouselImage": "cimage_1678472689904.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640b75fcc8eea4cefe4d961d"
+  },
+  "carouselImage": "cimage_1678472700566.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640b7619c8eea4cefe4d9623"
+  },
+  "carouselImage": "cimage_1678472729012.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640b771dc8eea4cefe4d9625"
+  },
+  "carouselImage": "cimage_1678472989077.jfif",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640b7728c8eea4cefe4d9627"
+  },
+  "carouselImage": "cimage_1678473000984.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640b7731c8eea4cefe4d9629"
+  },
+  "carouselImage": "cimage_1678473009600.jpg",
+  "__v": 0
+}]

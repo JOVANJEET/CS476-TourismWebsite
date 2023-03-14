@@ -26,4 +26,10 @@ router.post(
   touristController.postEditProfile
 );
 
+router.get(
+  "/bookedpackage",
+  isTouristLoggedIn,
+  touristController.getBookedPackage
+);
+router.post("/invoice", isTouristLoggedIn, touristController.getInvoice);
 module.exports = router;

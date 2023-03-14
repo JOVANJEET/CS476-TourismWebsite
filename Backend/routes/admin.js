@@ -21,7 +21,7 @@ router.post(
   isAdminLoggedin,
   adminConroller.deleteCarousel
 );
-
+//router.post("/logout", adminConroller.postLogout);
 //blogs
 
 router.get("/blogs", isAdminLoggedin, adminConroller.getBlogs);
@@ -36,4 +36,5 @@ router.post("/package/action", isAdminLoggedin, adminConroller.actionPackage);
 //users
 router.get("/guides", isAdminLoggedin, adminConroller.getGuides);
 router.get("/tourists", isAdminLoggedin, adminConroller.getTourists);
+router.post("/guide/action", isAdminLoggedin, adminConroller.guideAction);
 module.exports = router;

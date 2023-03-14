@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "64039a1f16894bbe22153a9f"
+  },
+  "guideName": "jovan",
+  "guideEmail": "jovan@gmail.com",
+  "guidePassword": "$2b$12$o/EScLgTORxbmLj87aURtOJQP.trMGIRUrGKxMsd7fvw3h8Hc/eyq",
+  "guidePhone": "",
+  "guideAddress": "",
+  "guideState": "",
+  "guideCity": "",
+  "guideOrganization": "",
+  "guideEducation": "",
+  "guideCountry": "",
+  "profileComplete": false,
+  "blogs": [
+    {
+      "$oid": "64039a9b16894bbe22153abd"
+    }
+  ],
+  "packages": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677957663986"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1677957787620"
+    }
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "guideName": "Radhika Jain",
+  "guideEmail": "radhe@gmail.com",
+  "guidePassword": "$2b$12$ztdDpEDMYiAzsGx./MdoGuvaoJv/C7JMVv3cMIQ24zg/8PJKwQlKK",
+  "guidePhone": "+91 333 444 7789",
+  "guideAddress": "Karol Bagh",
+  "guideState": "Delhi",
+  "guideCity": "Delhi",
+  "guideOrganization": "Guide International",
+  "guideEducation": "Tourism",
+  "guideCountry": "India",
+  "profileComplete": true,
+  "blogs": [
+    {
+      "$oid": "6403aea016894bbe22153e2a"
+    },
+    {
+      "$oid": "640e1a6244af5f8ab9616cdd"
+    }
+  ],
+  "packages": [
+    {
+      "$oid": "6403f97f5094ddea4b6c675d"
+    },
+    {
+      "$oid": "640b7f37c8eea4cefe4d9650"
+    },
+    {
+      "$oid": "640b806fc8eea4cefe4d9664"
+    },
+    {
+      "$oid": "640cd605961e4bcd88a58fbd"
+    },
+    {
+      "$oid": "640ce2b2961e4bcd88a58fd9"
+    },
+    {
+      "$oid": "640ce4f7961e4bcd88a58fe8"
+    },
+    {
+      "$oid": "640ce630961e4bcd88a59000"
+    },
+    {
+      "$oid": "640ce6cc961e4bcd88a5900a"
+    },
+    {
+      "$oid": "640ce7d1961e4bcd88a5901e"
+    },
+    {
+      "$oid": "640ce897961e4bcd88a59030"
+    },
+    {
+      "$oid": "640ce9b5961e4bcd88a59042"
+    },
+    {
+      "$oid": "640cea9c961e4bcd88a59054"
+    },
+    {
+      "$oid": "640ceb5d961e4bcd88a5905e"
+    },
+    {
+      "$oid": "640cec50961e4bcd88a59068"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677962627243"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678645858087"
+    }
+  },
+  "__v": 16,
+  "guideImage": "gimage_1677962700585.jpg"
+},{
+  "_id": {
+    "$oid": "640cefd5961e4bcd88a59093"
+  },
+  "guideName": "Arun Mahajan",
+  "guideEmail": "am@gmail.com",
+  "guidePassword": "$2b$12$V3qNgbxXQe/S.Uyfk0Bsv.OhiW1N8KErzzldEadMUj4tD8qwzriRy",
+  "guidePhone": "",
+  "guideAddress": "",
+  "guideState": "",
+  "guideCity": "",
+  "guideOrganization": "",
+  "guideEducation": "",
+  "guideCountry": "",
+  "profileComplete": false,
+  "blogs": [
+    {
+      "$oid": "640cf12f961e4bcd88a590a8"
+    }
+  ],
+  "packages": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678569429788"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678569775754"
+    }
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "640ceffa961e4bcd88a59096"
+  },
+  "guideName": "Dinesh Singla",
+  "guideEmail": "ds@gmail.com",
+  "guidePassword": "$2b$12$RzG14DuRbC7EgDkjcbMk3u98SB59.6BfavAGwpZ8qeIVD4o6HgacS",
+  "guidePhone": "",
+  "guideAddress": "",
+  "guideState": "",
+  "guideCity": "",
+  "guideOrganization": "",
+  "guideEducation": "",
+  "guideCountry": "",
+  "profileComplete": false,
+  "blogs": [
+    {
+      "$oid": "640cf216961e4bcd88a590c7"
+    }
+  ],
+  "packages": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678569466153"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678570006564"
+    }
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "640cf010961e4bcd88a59099"
+  },
+  "guideName": "Bobby Doel",
+  "guideEmail": "bd@gmail.com",
+  "guidePassword": "$2b$12$90CQb7WeBy/KIdRBhfF73.HbF.ilicvqV6Ny8Ff5Zbe/jimTnAJUS",
+  "guidePhone": "",
+  "guideAddress": "",
+  "guideState": "",
+  "guideCity": "",
+  "guideOrganization": "",
+  "guideEducation": "",
+  "guideCountry": "",
+  "profileComplete": false,
+  "blogs": [
+    {
+      "$oid": "640cf2f2961e4bcd88a590e4"
+    }
+  ],
+  "packages": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678569488394"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678570226359"
+    }
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "640cf025961e4bcd88a5909c"
+  },
+  "guideName": "Rajinder Prasad",
+  "guideEmail": "rp@gmail.com",
+  "guidePassword": "$2b$12$f889FLQhr2mq6KMkSgKjXO7wppWTeNkfiTpd3GJPG8wA6E6kLrdT6",
+  "guidePhone": "",
+  "guideAddress": "",
+  "guideState": "",
+  "guideCity": "",
+  "guideOrganization": "",
+  "guideEducation": "",
+  "guideCountry": "",
+  "profileComplete": false,
+  "blogs": [
+    {
+      "$oid": "640cf49f961e4bcd88a59101"
+    }
+  ],
+  "packages": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678569509462"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678570655941"
+    }
+  },
+  "__v": 1
+}]

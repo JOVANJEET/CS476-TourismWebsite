@@ -1,0 +1,391 @@
+[{
+  "_id": {
+    "$oid": "640b7f37c8eea4cefe4d9650"
+  },
+  "packageTitle": "Old Monuments Visit",
+  "packageDescription": "This Package includes the destination to various old places constructed by Mughal empire such as Red fort, Taj Mahal etc. ",
+  "packageItinerary": "Taj Mahal at 10 am\r\nRed Fort 1pm\r\nOther monuments 3pm",
+  "packageSlot": 40501,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "Alaska"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "50",
+  "packageImage": "pimage_1678475063800.png",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678475063812"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678475122025"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640b806fc8eea4cefe4d9664"
+  },
+  "packageTitle": "Niagara Falls",
+  "packageDescription": "Niagara Falls (/naɪˈæɡərə/) is a group of three waterfalls at the southern end of Niagara Gorge, spanning the border between the province of Ontario in Canada and the state of New York in the United States. The largest of the three is Horseshoe Falls, which straddles the international border of the two countries.It is also known as the Canadian Falls.",
+  "packageItinerary": "Niagara Falls",
+  "packageSlot": 40502,
+  "packageDuration": "2",
+  "packageRoutes": [
+    "California"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "150",
+  "packageImage": "pimage_1678475375400.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678475375407"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678475388874"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640cd605961e4bcd88a58fbd"
+  },
+  "packageTitle": "CN Tower & the Royal Ontario Museum",
+  "packageDescription": "The CN Tower is a 553.3 m-high concrete communications and observation tower in downtown Toronto, Ontario, Canada. Built on the former Railway Lands, it was completed in 1976. Its name \"CN\" referred to Canadian National, the railway company that built the tower. Following the railway's decision to divest non-core freight railway assets prior to the company's privatization in 1995, it transferred the tower to the Canada Lands Company, a federal Crown corporation responsible for real estate development. The CN Tower held the record for the world's tallest free-standing structure for 32 years, from 1975 until 2007, when it was surpassed by the Burj Khalifa, and was the world's tallest tower until 2009 when it was surpassed by the Canton Tower.\r\n\r\nThe Royal Ontario Museum is a museum of art, world culture and natural history in Toronto, Ontario, Canada. It is one of the largest museums in North America and the largest in Canada. It attracts more than one million visitors every year, making the ROM the most-visited museum in Canada. The museum is north of Queen's Park, in the University of Toronto district, with its main entrance on Bloor Street West. \r\n\r\n",
+  "packageItinerary": "CN Tower & the Royal Ontario Museum",
+  "packageSlot": 40503,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "Delaware"
+  ],
+  "packageViews": 2,
+  "status": "approved",
+  "packagePrice": "100",
+  "packageImage": "pimage_1678562821419.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678562821434"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678587620366"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640ce2b2961e4bcd88a58fd9"
+  },
+  "packageTitle": "Vancouver",
+  "packageDescription": "Vancouver is a major city in western Canada, located in the Lower Mainland region of British Columbia. As the most populous city in the province, the 2021 Canadian census recorded 662,248 people in the city, up from 631,486 in 2016. The Greater Vancouver area had a population of 2.6 million in 2021, making it the third-largest metropolitan area in Canada.",
+  "packageItinerary": "Stanley Park\r\nCapilano Suspension Bridge Park\r\nGranville Island",
+  "packageSlot": 6654,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "Tennessee"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "80",
+  "packageImage": "pimage_1678566066816.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678566066836"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678566666903"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640ce4f7961e4bcd88a58fe8"
+  },
+  "packageTitle": "Montreal",
+  "packageDescription": "Montreal is the second most populous city in Canada and the most populous city in the province of Quebec. Founded in 1642 as Ville-Marie, or \"City of Mary\", it is named after Mount Royal,[16] the triple-peaked hill around which the early city of Ville-Marie is built. The city is centred on the Island of Montreal, which obtained its name from the same origin as the city, and a few much smaller peripheral islands, the largest of which is Île Bizard. The city is 196 km (122 mi) east of the national capital Ottawa, and 258 km (160 mi) southwest of the provincial capital, Quebec City.",
+  "packageItinerary": "Notre-Dame Basilica of Montreal\r\nMount Royal\r\nThe Montreal Museum of Fine Arts",
+  "packageSlot": 40504,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "Texas"
+  ],
+  "packageViews": 1,
+  "status": "approved",
+  "packagePrice": "80",
+  "packageImage": "pimage_1678566647745.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678566647751"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678587724362"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640ce630961e4bcd88a59000"
+  },
+  "packageTitle": "Quebec City",
+  "packageDescription": "Quebec City is the capital city of the Canadian province of Quebec. As of July 2021, the city had a population of 549,459 and the metropolitan area had a population of 839,311. It is the eleventh-largest city and the seventh-largest metropolitan area in Canada. It is also the second-largest city in the province after Montreal. It has a humid continental climate with warm summers coupled with cold and snowy winters.",
+  "packageItinerary": "Fairmont le Chateau Frontenac\r\nMontmorency Falls\r\nMuseum of Civilization",
+  "packageSlot": 40505,
+  "packageDuration": "2",
+  "packageRoutes": [
+    "Delaware"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "90",
+  "packageImage": "pimage_1678566960770.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678566960789"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678567133075"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640ce6cc961e4bcd88a5900a"
+  },
+  "packageTitle": "Calgary",
+  "packageDescription": "Calgary is the largest city in the western Canadian province of Alberta and the largest metro area of the three Prairie Provinces. As of 2021, the city proper had a population of 1,306,784 and a metropolitan population of 1,481,806, making it the third-largest city and fifth-largest metropolitan area in Canada.",
+  "packageItinerary": "Calgary Zoo\r\nCalgary Tower\r\nHeritage Park",
+  "packageSlot": 40506,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "California"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "80",
+  "packageImage": "pimage_1678567116244.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678567116275"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678567137267"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640ce7d1961e4bcd88a5901e"
+  },
+  "packageTitle": "Mumbai",
+  "packageDescription": "Mumbai is the capital city of the Indian state of Maharashtra and the de facto financial centre of India. According to the United Nations, as of 2018, Mumbai is the second-most populous city in India after Delhi, and the eighth-most populous city in the world, with a population of roughly 20 million (2 crore).",
+  "packageItinerary": "Gateway of India Mumbai\r\nElephant caves\r\nMarine Drive\r\nShree Siddhivinayak Temple\r\nKanheri Caves\r\n",
+  "packageSlot": 40506,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "Delaware"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "90",
+  "packageImage": "pimage_1678567377467.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678567377477"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678567389284"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640ce897961e4bcd88a59030"
+  },
+  "packageTitle": "Goa",
+  "packageDescription": "Goa is a state on the southwestern coast of India. It is situated within the Konkan region, geographically separated from the Deccan highlands by the Western Ghats. It is bound by the Indian states of Maharashtra to the north, and Karnataka to the east and south, with the Arabian Sea in the west. It is India's smallest state by area and fourth-smallest by population. Goa has the highest GDP per capita among all Indian states, two and a half times as high as the GDP per capita of the country as a whole.",
+  "packageItinerary": "Dudhsagar Falls\r\nPalolem Beach\r\nBasilica of Bom Jesus",
+  "packageSlot": 40506,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "California"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "80",
+  "packageImage": "pimage_1678567575656.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678567575667"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678567585802"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640ce9b5961e4bcd88a59042"
+  },
+  "packageTitle": "Jaipur",
+  "packageDescription": "Jaipur formerly Jeypore, is the capital and largest city of the Indian state of Rajasthan. As of 2022, the city had a population of 4.5 million, making it the ninth most populous city in the country. Jaipur is also known as the Pink City, due to the dominant colour scheme of its buildings. It is also known as the Paris of India, and C. V. Raman called it the Island of Glory.",
+  "packageItinerary": "Amber Palace\r\nHawa Mahal\r\nCity Palace, Jaipur\r\nJal Mahal\r\nRambagh Palace\r\n",
+  "packageSlot": 40508,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "Delaware"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "70",
+  "packageImage": "pimage_1678567861338.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678567861349"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678567879175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640cea9c961e4bcd88a59054"
+  },
+  "packageTitle": "Varanasi",
+  "packageDescription": "Varanasi is a city on the Ganges river in northern India that has a central place in the traditions of pilgrimage, death, and mourning in the Hindu world. The city has a syncretic tradition of Muslim artisanship that underpins its religious tourism. Located in the middle-Ganges valley in the southeastern part of the state of Uttar Pradesh, Varanasi lies on the left bank of the river.",
+  "packageItinerary": "Shri Kashi Viswanath Temple\r\nDashashwamedh Ghat\r\nAssi Ghat",
+  "packageSlot": 40509,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "Texas"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "60",
+  "packageImage": "pimage_1678568092962.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678568092974"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678568545205"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640ceb5d961e4bcd88a5905e"
+  },
+  "packageTitle": "Vrindavan",
+  "packageDescription": "Vrindavan also spelt Vrindaban and Brindaban, is a historical city in the Mathura district of Uttar Pradesh, India. It is located in the Braj Bhoomi region and holds religious importance in Hinduism as Krishna spent most of his childhood days in this city. Vrindavan has about 5,500 temples dedicated to the worship of Krishna and his divine consort Radha.",
+  "packageItinerary": "Thakur Shri Bankey Bihari Ji Temple, Vrindavan\r\nShri Radha Raman Temple, Vrindavan\r\nNidhivan, Vrindavan\r\nShri Radha Madan Mohan Ji Temple, Vrindavan\r\nSri Sri Krishna Balaram Temple (ISKCON Vrindavan)",
+  "packageSlot": 40510,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "Delaware"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "60",
+  "packageImage": "pimage_1678568285758.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678568285765"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678568550303"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640cec50961e4bcd88a59068"
+  },
+  "packageTitle": "Angkor Wat ",
+  "packageDescription": "Angkor Wat is a temple complex in Cambodia, located on a site measuring 162.6 hectares (1,626,000 m2; 402 acres). The Guinness World Records considers it as the largest religious structure in the world. Originally constructed as a Hindu temple dedicated to the god Vishnu for the Khmer Empire by King Suryavarman II during the 12th century, it was gradually transformed into a Buddhist temple towards the end of the century; as such, it is also described as a \"Hindu-Buddhist\" temple.",
+  "packageItinerary": "Angkor Wat\r\nTa Prohm Temple\r\nBayon Temple",
+  "packageSlot": 405011,
+  "packageDuration": "1",
+  "packageRoutes": [
+    "California"
+  ],
+  "packageViews": 0,
+  "status": "approved",
+  "packagePrice": "60",
+  "packageImage": "pimage_1678568528668.jpg",
+  "packageGuide": {
+    "$oid": "6403ad8316894bbe22153daa"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678568528676"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678568554443"
+    }
+  },
+  "__v": 0
+}]

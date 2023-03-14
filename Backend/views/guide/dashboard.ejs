@@ -1,55 +1,48 @@
 <!-- /header -->
 <%- include("../conn/header.ejs") %> <%- include("../conn/top.ejs") %>
 <!-- Main Sidebar Container -->
-<%- include("./navbar.ejs") %>
+<%- include("../conn/navebar.ejs") %>
 
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1>Like & Dislike of the Blogs</h1>
+        <div class="col-sm-12">
+         
+          <div>
+            <canvas
+              id="myChart"
+              width="700"
+              height="300"
+              aria-label="chart"
+              role="img"
+            ></canvas>
+          </div>
         </div>
       </div>
-      <div>
-        <canvas
-          id="myChart"
-          width="700"
-          height="300"
-          aria-label="chart"
-          role="img"
-        ></canvas>
-      </div>
     </div>
-
-    <% var labelsVal = blogLabels %>
-
     <!-- /.container-fluid -->
   </section>
 </div>
-
 <!-- /Footer -->
 <%- include("../conn/copyright.ejs") %>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script src="path/to/chartjs/dist/chart.umd.js"></script>
 <script>
-  var labels = " <%=blogLabels%>";
-  var likes = " <%=blogLikes%>";
-  var dislikes = " <%=blogDislikes%>";
-  const mydata = [1, 1, 1, 1, 1];
-
+  const blogLabels = "<%=blogLabels%>";
+  const blogLikes = "<%=likes%>";
+  const blogDislikes = "<%=dislikes%>";
   var ctx = document.getElementById("myChart").getContext("2d");
   var myChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: labels.split(","),
+      labels: blogLabels.split(","),
       datasets: [
         {
           label: "Like",
-          data: likes.split(","),
+          data: blogLikes.split(","),
           // Background Color
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
@@ -76,7 +69,7 @@
         {
           //  Chart Label
           label: "Dislike",
-          data: dislikes.split(","),
+          data: blogDislikes.split(","),
 
           // Background Color
           backgroundColor: [

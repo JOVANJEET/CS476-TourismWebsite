@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt");
 const Tourist = require("../model/tourist");
 const fs = require("fs");
 const fileHelper = require("../util/file");
+const Booked = require("../model/booked");
+const { populate } = require("../model/tourist");
 
 exports.getLogin = (req, res, next) => {
   res.render("tourist/login", {
@@ -14,7 +16,11 @@ exports.getLogin = (req, res, next) => {
 exports.postLogin = async (req, res, next) => {
   const temail = req.body.temail;
   const tpass = req.body.tpass;
-
+  // if (req.session.isLoggedIn || req.session.isAdminLoggedIn) {
+  //   await req.session.destroy((err) => {
+  //     // console.log(err);
+  //   });
+  // }
   Tourist.findOne({ touristEmail: temail })
     .then((tourist) => {
       if (!tourist) {
@@ -151,4 +157,56 @@ exports.postEditProfile = (req, res, next) => {
       res.redirect("/tourist/profile");
     })
     .catch((err) => console.log(err));
+};
+
+exports.getBookedPackage = (req, res, next) => {
+  const touristId = req.tourist._id;
+  Tourist.findById(touristId)
+    .populate({
+      path: "booked",
+      model: "Booked",
+      populate: {
+        path: "packageId",
+        model: "Package",
+      },
+    })
+
+    .then((tourist) => {
+      // console.log(tourist.booked[0].packageId);
+      res.render("tourist/bookedPackage", {
+        pageTitle: "Travel World | Toursit Booked Package",
+
+        tourist: tourist,
+        profileImage: req.tourist.touristImage,
+      });
+    });
+};
+
+exports.getInvoice = (req, res, next) => {
+  let logintype = "none";
+  if (req.session.isAdminLoggedIn) {
+    logintype = "admin";
+  } else if (req.session.isLoggedIn) {
+    logintype = "guide";
+  } else if (req.session.isTouristLoggedIn) {
+    logintype = "tourist";
+  }
+  const bookedId = req.body.bookedId;
+  Booked.findById(bookedId)
+    .populate({
+      path: "packageId",
+      model: "Package",
+      populate: {
+        path: "packageGuide",
+        model: "Guide",
+      },
+    })
+
+    .then((booked) => {
+      res.render("package/invoice", {
+        pageTitle: "Travel World | Toursit Invoice",
+        booked: booked,
+        logintype: logintype,
+      });
+    });
 };
