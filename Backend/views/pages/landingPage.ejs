@@ -342,3 +342,32 @@ color: #666;
               Alberta has a humid continental climate with long, cold winters and short, warm summers. Temperatures can vary widely throughout the year, with average temperatures ranging from -10°C (14°F) in January to 17°C (63°F) in July. The province receives a moderate amount of precipitation, with the majority falling during the summer months. Alberta is also known for its frequent chinook winds, which can cause sudden, dramatic temperature increases during the winter months. Additionally, the province experiences occasional severe weather events such as thunderstorms, tornadoes, and blizzards.
           </p>
           </div>
+<div class="weather-right">
+          <ul>
+              <a class="weatherwidget-io" href="https://forecast7.com/en/53d93n116d58/alberta/" data-label_1="ALBERTA" data-label_2="WEATHER" data-font="Times New Roman" data-icons="Climacons Animated" data-theme="mountains" >ALBERTA WEATHER</a>
+
+          </ul>
+      </div>
+
+      <div class="weather-right">
+
+      </div>
+
+  </section>
+  </div>
+</div>
+</div>
+<!-- Treanding  Package End -->
+<!-- Footer Start -->
+<%- include("../frontviewComm/footer.ejs") %>
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){js=d.createElement(s);
+      js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+fjs.parentNode.insertBefore(js,fjs);}
+}
+(document,'script','weatherwidget-io-js');
+</script>
+<!-- Footer End -->
+<%- include("../conn/footer.ejs") %>
