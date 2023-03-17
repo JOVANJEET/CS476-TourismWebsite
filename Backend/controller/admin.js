@@ -6,18 +6,33 @@ const Guide = require("../model/guide");
 const Tourist = require("../model/tourist");
 const fs = require("fs");
 const fileHelper = require("../util/file");
-exports.getDashboard = (req, res, next) => {
+
+exports.getDashboard = async (req, res, next) => {
+  const blogs = await Blog.find({ status: "approved" }).limit(6);
+  const blogLabels = blogs.map((b) => b.blogTitle);
+  const blogLikes = blogs.map((b) => b.likes);
+
+  const blogDislikes = blogs.map((b) => b.dislikes);
   res.render("admin/dashboard", {
     admin: req.admin,
+    blogLabels: blogLabels,
+    blogLikes: blogLikes,
+    blogDislikes: blogDislikes,
     profileImage: false,
   });
 };
+
 exports.getLogin = (req, res, next) => {
   res.render("admin/login");
 };
 
 exports.postLogin = (req, res, next) => {
   const { aname, apass } = req.body;
+  // if (req.session.isTouristLoggedIn || req.session.isAdminLoggedIn) {
+  //   req.session.destroy((err) => {
+  //     // console.log(err);
+  //   });
+  // }
   if (aname === process.env.ADMIN_ID && apass === process.env.ADMIN_PASS) {
     req.session.isAdminLoggedIn = true;
     req.session.admin = {
@@ -29,12 +44,18 @@ exports.postLogin = (req, res, next) => {
     res.redirect("/admin/login");
   }
 };
+exports.postLogout = (req, res, next) => {
+  req.session.destroy((err) => {
+    res.redirect("/");
+  });
+};
 exports.getAddCarousel = (req, res, next) => {
   res.render("admin/addheaderimage", {
     admin: req.admin,
     profileImage: false,
   });
 };
+
 exports.postAddCarousel = (req, res, next) => {
   const cimage = req.file;
   if (!cimage) {
@@ -54,13 +75,14 @@ exports.postAddCarousel = (req, res, next) => {
 
 exports.getCarousels = (req, res, next) => {
   MainPage.find().then((carousels) => {
-    res.render("admin/carousels", {
+    res.render("admin/carauselList", {
       admin: req.admin,
       carousels: carousels,
       profileImage: false,
     });
   });
 };
+
 exports.deleteCarousel = (req, res, next) => {
   const carouselId = req.body.id;
   MainPage.findByIdAndRemove(carouselId)
@@ -118,6 +140,7 @@ exports.approveBlog = (req, res, next) => {
       console.log(err);
     });
 };
+
 exports.abortBlog = (req, res, next) => {
   const blogId = req.body.blogId;
   Blog.findByIdAndUpdate(blogId)

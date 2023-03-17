@@ -5,27 +5,26 @@ const session = require("express-session");
 const MongoDBstore = require("connect-mongodb-session")(session);
 const PORT = 5000;
 require("dotenv").config();
-//model
+
+// Importing Mongoose models
 const Guide = require("./model/guide");
 const Tourist = require("./model/tourist");
 
 const dbUrl = "mongodb://0.0.0.0:27017/tourist";
 const app = express();
 
-//guide session
+// Guide session
 const oSessionStore = new MongoDBstore({
-  //calling constructor
   uri: dbUrl,
   collection: "usersessions",
 });
 
-//routes
+// Importing routes
 const guideRoute = require("./routes/guide");
 const adminRoute = require("./routes/admin");
 const touristRoute = require("./routes/tourist");
 const publicRoute = require("./routes/publicCon");
 const blogRoute = require("./routes/blog");
-
 const packageRoute = require("./routes/package");
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -33,17 +32,18 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use("/profile", express.static("upload/images"));
-//session setup for guide
+
+// Setting up session for guide
 app.use(
   session({
-    secret: "Guide and Tourist is awsome",
+    secret: "Guide and Tourist is awesome",
     resave: false,
     saveUninitialized: false,
     store: oSessionStore,
   })
 );
 
-//guide store
+// Middleware to check if guide is authenticated
 app.use((req, res, next) => {
   if (!req.session.guide) {
     return next();
@@ -56,13 +56,14 @@ app.use((req, res, next) => {
     })
     .catch((err) => console.log(err));
 });
-//local variable
+
+// Middleware to set local variables for templates
 app.use((req, res, next) => {
   res.locals.isAuthenticated = req.session.isLoggedIn;
   next();
 });
 
-//tourist session
+// Setting up session for tourist
 app.use((req, res, next) => {
   if (!req.session.tourist) {
     return next();
@@ -75,13 +76,14 @@ app.use((req, res, next) => {
     })
     .catch((err) => console.log(err));
 });
-//local variable for tourist
+
+// Middleware to set local variables for templates
 app.use((req, res, next) => {
   res.locals.isTouristAuthenticated = req.session.isTouristLoggedIn;
   next();
 });
 
-//admin login
+// Setting up session for admin
 app.use((req, res, next) => {
   if (!req.session.admin) {
     return next();
@@ -92,68 +94,51 @@ app.use((req, res, next) => {
   };
   next();
 });
+
+// Middleware to set local variables for templates
 app.use((req, res, next) => {
   res.locals.isAdminAuthenticated = req.session.isAdminLoggedIn;
   next();
 });
 
+// Routes setup
 app.use(publicRoute);
-app.get("/passwordforgot", (req, res) => {
-  res.render("pages/forgotPage");
-});
-app.get("/recoverpassword", (req, res) => {
-  res.render("pages/recoverpassword");
-});
 app.use("/guide", guideRoute);
 app.use("/admin", adminRoute);
 app.use("/tourist", touristRoute);
 app.use(packageRoute);
 app.use(blogRoute);
 
-
-app.get("/profile", (req, res) => {
-  res.render("pages/profile", { guide: req.guide });
+app.get("/guide/booking", (req, res) => {
+  res.render("guide/booking_details", {
+    guide: req.guide,
+    profileImage: false,
+  });
 });
-app.get("/basicDetails", (req, res) => {
-  res.render("pages/basicdetails", { guide: req.guide });
-});
-app.get("/faq", (req, res) => {
-  res.render("pages/faq", { guide: req.guide });
-});
-
-app.get("/allPackage", (req, res) => {
-  res.render("package/allPackage", { guide: req.guide });
-});
-app.get("/packageDetails", (req, res) => {
-  res.render("package/packageDetails", { guide: req.guide });
-});
-
+// Render the all login page when accessed at the appropriate route
 app.get("/login_as", (req, res) => {
   res.render("pages/allLogin");
 });
-app.get("/admin/carausel_list", (req, res) => {
-  res.render("admin/carauselList", { admin: req.admin });
-});
-app.get("/admin/allguide", (req, res) => {
-  res.render("admin/allGuideList", { admin: req.admin });
-});
-app.get("/admin/alltourist", (req, res) => {
-  res.render("admin/allTourist", { admin: req.admin });
-});
-app.get("/booking", (req, res) => {
-  res.render("package/booking_details", { admin: req.admin });
-});
 
-app.get("/invoice", (req, res) => {
-  res.render("package/invoice", { admin: req.admin });
-});
-
+// Render the about us page when accessed at the appropriate route
 app.get("/about", (req, res) => {
-  res.render("pages/aboutus", { admin: req.admin });
+  let logintype = "none";
+  if (req.session.isAdminLoggedIn) {
+    logintype = "admin";
+  } else if (req.session.isLoggedIn) {
+    logintype = "guide";
+  } else if (req.session.isTouristLoggedIn) {
+    logintype = "tourist";
+  }
+  res.render("pages/aboutus", { admin: req.admin, logintype: logintype });
 });
+
+// Render the error 404 page for any route that is not defined above
 app.use((req, res) => {
   res.status(404).render("pages/error404");
 });
+
+// Start the server and listen for incoming requests on the specified port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
