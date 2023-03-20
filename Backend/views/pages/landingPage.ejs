@@ -35,8 +35,6 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
 
 
-
-
 .blogcard_body {
 padding: 1rem 0rem 0rem 0rem;
 display: flex;
@@ -98,9 +96,6 @@ border-radius: 50%;
 color: #666;
 }
 
-
-
-
 #collectibles{
 	width: 100%;
 	display: flex;
@@ -132,6 +127,39 @@ color: #666;
     font-size: 1.5rem;
     line-height: 1.4rem;
     color: rgb(43, 126, 199);
+}
+
+#home{
+	width: 100%;
+	padding: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.home-left{
+	height:100%;
+	position: relative;
+}
+
+.home-left img{
+	height: 350px;
+	width: 450px;
+	border-radius: 10px;
+}
+
+.home-right{
+	width: 50%;
+}
+
+.home-heading{
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.home-para{
+	margin-bottom: 20px;
 }
 
 #weather{
@@ -196,7 +224,17 @@ color: #666;
     <% }%> <% }else{ %>
     <div class="carousel-item active">
       <img
-        src="https://img.freepik.com/free-vector/travel-sale-with-photo-landing-page_23-2148657437.jpg?w=500&t=st=1675408900~exp=1675409500~hmac=c2de8b1e24aa78efa53be189b3758983f05cd207ba170639428359fb122d8765"
+        src="https://sencanada.ca/media/368124/com_pho_gettyimages-954333926.jpg?&quality=95&width=1920"
+        class="d-block w-100"
+        style="height: 500px"
+        alt="..."
+      />
+    </div>
+
+
+    <div class="carousel-item">
+      <img
+        src="https://candbadvertising.com/wp-content/uploads/2019/01/TA-photo-6.jpg"
         class="d-block w-100"
         style="height: 500px"
         alt="..."
@@ -205,7 +243,7 @@ color: #666;
 
     <div class="carousel-item">
       <img
-        src="https://img.freepik.com/free-vector/travel-sale-with-photo-landing-page_23-2148657437.jpg?w=500&t=st=1675408900~exp=1675409500~hmac=c2de8b1e24aa78efa53be189b3758983f05cd207ba170639428359fb122d8765"
+        src="https://thecanadaguide.com/wp-content/uploads/lakelouise-1600x1074.jpg"
         class="d-block w-100"
         style="height: 500px"
         alt="..."
@@ -239,7 +277,7 @@ color: #666;
 <div class="container-fulid">
   <div class="album">
     <div class="container " style="max-width: 1400px;" >
-      <h1 class="m-3">Trending Package</h1>
+      <h1 class="m-3">Trending Packages</h1>
       <div class="row">
         <% if(packages.length>0){ %>
         <% for(var i=0; i<packages.length; i++){ %>
@@ -247,7 +285,7 @@ color: #666;
         <div class="card blog_card m-3 p-3 ">
           <a  style="text-decoration:none;" href="/package/<%=packages[i].id %>">
           <div class="card__header blog_header">
-          <img src="/profile/<%=packages[i].packageImage %>" alt="card__image" class="card__image img_blog" width="600">
+          <img src="/profile/<%=packages[i].packageImage %>" alt="card_image" class="card_image img_blog" width="600">
           </div>
           <div class="card__body blogcard_body">
           <!-- <span class="blog_tag tag-red">Technology</span> -->
@@ -263,7 +301,28 @@ color: #666;
         <% } %>
         <% } %>
       </div>
-   
+     
+      <section id="home">
+        <div class="home-left">
+          <img src="/img/home.jpeg" alt="" width="1500" height="2000">
+        </div>
+        <div class="home-right">
+            <h2 class="home-heading"> About Us </h2>
+            <p class="home-para"> Welcome to our tourism website! We are a team of passionate travel enthusiasts who love to explore and share our experiences with others. Our goal is to provide you with the best travel information and inspiration to help you plan your next adventure. Whether you're looking for a relaxing beach getaway, an adventurous trek through the mountains, or a cultural immersion in a new city, we've got you covered. Let us be your guide to the world of travel! We're delighted to have you here and excited to share more about our company.
+
+              At WanderLust, we're passionate about travel and creating unforgettable experiences for our customers. Our mission is to connect travelers with their dream destinations and help them make the most out of their trips.
+              
+              We understand that travel is personal, and that's why we offer customized travel solutions tailored to your unique preferences and interests. Whether you're looking for a relaxing beach vacation, an adventurous hike through the mountains, or a cultural immersion in a new city, we've got you covered.
+              
+              Our team is made up of experienced travel experts who are committed to providing excellent service and guidance throughout your journey. We work with trusted partners and suppliers to ensure that you have access to the best deals, accommodations, and activities.
+              
+              As a socially responsible company, we also strive to make a positive impact on the communities and environments we visit. We promote sustainable travel practices and support local initiatives that benefit the destinations we serve.
+              
+              We hope that you'll find our website informative and inspiring, and we look forward to helping you plan your next adventure. If you have any questions or feedback, please don't hesitate to contact us. Thank you for choosing WanderLust!
+              </p>
+        </div>
+    </section>
+
      <section id="collectibles">
         <h2 class= "heading">Antiques and Collectibles</h2>
         <p>
@@ -271,12 +330,12 @@ color: #666;
             It's always a good idea to call ahead to confirm hours of operation and inventory before visiting any of these stores.
         </p>
         <div class="num">
-            <div class="num-item"><span>Empire Ammolite</span></div>
-            <div class="num-item"><span> Wonderland Sculpture</span></div>
-            <div class="num-item"><span>The Canadian Badlands</span></div>
+            <a class="num-item" href="https://www.empireammolite.com/"> Empire Ammolite </a>
+            <a class="num-item" href="https://www.gpsmycity.com/attractions/wonderland-sculpture-50846.html"> Wonderland Sculpture </a>
+            <a class="num-item" href="https://badlandsamp.com/" > The Canadian Badlands </a>
         </div>
     </section>
-  
+
     <section id="weather">
         <div class="weather-left">
             <h2> Climatic Conditions</h2>
@@ -303,13 +362,13 @@ color: #666;
 <!-- Footer Start -->
 <%- include("../frontviewComm/footer.ejs") %>
 <script>
-  !function(d,s,id){
-    var js,fjs=d.getElementsByTagName(s)[0];
-    if(!d.getElementById(id)){js=d.createElement(s);
-        js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
-  fjs.parentNode.insertBefore(js,fjs);}
-  }
-  (document,'script','weatherwidget-io-js');
-  </script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){js=d.createElement(s);
+      js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+fjs.parentNode.insertBefore(js,fjs);}
+}
+(document,'script','weatherwidget-io-js');
+</script>
 <!-- Footer End -->
 <%- include("../conn/footer.ejs") %>
