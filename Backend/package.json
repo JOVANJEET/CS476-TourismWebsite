@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shoaibisa/tourist-web.git"
+    "url": "git+https://github.com/JOVANJEET/CS476-TourismWebsite.git"
   },
   "author": "Team",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shoaibisa/tourist-web/issues"
+    "url": "https://github.com/JOVANJEET/CS476-TourismWebsite.git"
   },
-  "homepage": "https://github.com/shoaibisa/tourist-web#readme",
+  "homepage": "https://github.com/JOVANJEET/CS476-TourismWebsite.git",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
