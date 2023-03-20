@@ -5,21 +5,21 @@ const session = require("express-session");
 const MongoDBstore = require("connect-mongodb-session")(session);
 const PORT = 5000;
 require("dotenv").config();
-
-// Importing Mongoose models
+//model
 const Guide = require("./model/guide");
 const Tourist = require("./model/tourist");
 
 const dbUrl = "mongodb://0.0.0.0:27017/tourist";
 const app = express();
 
-// Guide session
+//guide session
 const oSessionStore = new MongoDBstore({
+  //calling constructor
   uri: dbUrl,
   collection: "usersessions",
 });
 
-// Importing routes
+//routes
 const guideRoute = require("./routes/guide");
 const adminRoute = require("./routes/admin");
 const touristRoute = require("./routes/tourist");
@@ -32,18 +32,17 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use("/profile", express.static("upload/images"));
-
-// Setting up session for guide
+//session setup for guide
 app.use(
   session({
-    secret: "Guide and Tourist is awesome",
+    secret: "Guide and Tourist is awsome",
     resave: false,
     saveUninitialized: false,
     store: oSessionStore,
   })
 );
 
-// Middleware to check if guide is authenticated
+//guide store
 app.use((req, res, next) => {
   if (!req.session.guide) {
     return next();
@@ -56,14 +55,13 @@ app.use((req, res, next) => {
     })
     .catch((err) => console.log(err));
 });
-
-// Middleware to set local variables for templates
+//local variable
 app.use((req, res, next) => {
   res.locals.isAuthenticated = req.session.isLoggedIn;
   next();
 });
 
-// Setting up session for tourist
+//tourist session
 app.use((req, res, next) => {
   if (!req.session.tourist) {
     return next();
@@ -76,14 +74,13 @@ app.use((req, res, next) => {
     })
     .catch((err) => console.log(err));
 });
-
-// Middleware to set local variables for templates
+//local variable for tourist
 app.use((req, res, next) => {
   res.locals.isTouristAuthenticated = req.session.isTouristLoggedIn;
   next();
 });
 
-// Setting up session for admin
+//admin login
 app.use((req, res, next) => {
   if (!req.session.admin) {
     return next();
@@ -94,20 +91,35 @@ app.use((req, res, next) => {
   };
   next();
 });
-
-// Middleware to set local variables for templates
 app.use((req, res, next) => {
   res.locals.isAdminAuthenticated = req.session.isAdminLoggedIn;
   next();
 });
 
-// Routes setup
 app.use(publicRoute);
+// app.get("/passwordforgot", (req, res) => {
+//   res.render("pages/forgotPage");
+// });
+// app.get("/recoverpassword", (req, res) => {
+//   res.render("pages/recoverpassword");
+// });
 app.use("/guide", guideRoute);
 app.use("/admin", adminRoute);
 app.use("/tourist", touristRoute);
 app.use(packageRoute);
 app.use(blogRoute);
+
+// app.get("/faq", (req, res) => {
+//   let logintype = "none";
+//   if (req.session.isAdminLoggedIn) {
+//     logintype = "admin";
+//   } else if (req.session.isLoggedIn) {
+//     logintype = "guide";
+//   } else if (req.session.isTouristLoggedIn) {
+//     logintype = "tourist";
+//   }
+//   res.render("pages/feq", { guide: req.guide, logintype: logintype });
+// });
 
 app.get("/guide/booking", (req, res) => {
   res.render("guide/booking_details", {
@@ -115,12 +127,11 @@ app.get("/guide/booking", (req, res) => {
     profileImage: false,
   });
 });
-// Render the all login page when accessed at the appropriate route
+
 app.get("/login_as", (req, res) => {
   res.render("pages/allLogin");
 });
 
-// Render the about us page when accessed at the appropriate route
 app.get("/about", (req, res) => {
   let logintype = "none";
   if (req.session.isAdminLoggedIn) {
@@ -132,13 +143,9 @@ app.get("/about", (req, res) => {
   }
   res.render("pages/aboutus", { admin: req.admin, logintype: logintype });
 });
-
-// Render the error 404 page for any route that is not defined above
 app.use((req, res) => {
   res.status(404).render("pages/error404");
 });
-
-// Start the server and listen for incoming requests on the specified port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
