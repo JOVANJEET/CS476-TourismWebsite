@@ -205,6 +205,30 @@ color: #666;
 }
 
 </style>
+<!--The script for loading time and render time-->
+<!-- // The time it takes to load the page is shown using the below function -->
+<script>
+  window.onload = function () {
+    var loadTime =
+      window.performance.timing.domContentLoadedEventEnd -
+      window.performance.timing.navigationStart;
+    console.log("Page load time is " + loadTime / 1000);
+    // performanceDisplay = document.getElementById("performance-display"); // get a reference to the paragraph
+    // performanceDisplay.innerText = "Page load time - " + loadTime / 1000; // put the value of the variable loadTime into the paragraph
+  };
+</script>
+ <!-- The time it takes to render an image is shown using the below function. -->
+<script>
+  const observer = new PerformanceObserver((list) => {
+    list.getEntries().forEach((entry) => {
+      if (entry.identifier === "big-image") {
+        console.log("The image render time is: " + entry.renderTime);
+      }
+    });
+  });
+  observer.observe({ type: "element", buffered: true });
+</script>
+
 <!-- slider start -->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -355,6 +379,7 @@ color: #666;
         </div>
   
     </section>
+        <p id="performance-display"></p>
     </div>
   </div>
 </div>
